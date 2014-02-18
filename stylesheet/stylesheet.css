@@ -1,0 +1,317 @@
+/* ---------------------------------------------------------------
+--  Copyright             :  2014
+--  Author                :  JOHN J YIN
+--	Email				  :	 john.yin@ebizdesigner.com
+--  Version               :  0.1
+--  Date                  :  16/02/2014
+--  Description           :  one extension of Opencart Default theme
+--                           to support mobile, tablet
+--                         
+--                           based on Opencart(v1.5.6) stylesheet.css 
+--                           most changes would be marked
+--
+--  History               :
+--      <author>   <time>      <version >       <desc>
+--      JOHN      16/02/2014       0.1          
+--------------------------------------------------------------- */
+/*	-------------------------
+		global
+	-------------------------	*/
+
+	h1, .welcome {
+	color: #636E75;
+	font: Verdana;
+	/*margin-top: 0px;*/
+	margin-bottom: 20px;
+	font-size: 32px;
+	font-weight: normal;
+	text-shadow: 0 0 1px rgba(0, 0, 0, .01);
+}
+
+
+/*	------------------------------
+		layout 
+	------------------------------ */
+
+	
+/*	------------------------------ 
+		clearning 
+	------------------------------ */
+.clearbreak {
+	clear: both;
+}
+.clearafter:after {
+	height: 0;
+	clear: both;
+	content: "";
+	display: block;
+	visibility: hidden;
+}
+
+
+/*	-------------------------------
+		#container
+	-------------------------------	 */
+#container {
+	width: 980px;
+	margin: 0 auto;
+}
+
+
+/*	------------------------------- 
+		#header 
+	-------------------------------- */
+
+#header {
+    height: auto;			/* !! important to make sure not overlap with slideshow */
+    margin-bottom: 0;
+    padding-bottom: 0;
+    position: relative;
+}
+
+#header #topbar {
+	padding: 1px 0;
+	position: relative;
+	/* border-bottom: 1px solid #ddd; */
+}
+
+
+/*	--------------------------------
+		#header -> #topbar
+	--------------------------------	*/
+	
+#topbar #currency {
+    left: 0;
+    position: relative;
+    top: 0;
+    width: auto;
+}
+
+#topbar form {
+    float: left;
+}
+
+#header .links {
+    margin: 4px 0;
+    position: relative;
+	position: relative;
+}
+
+#header #welcome {
+    color: #999999;
+    float: right;
+    position: relative;
+    top: 0;
+}
+
+/*	--------------------------
+		#header -> #toppanel
+	------------------------- */
+#header #logo {
+	position: relative;
+    float: left;
+    left: 0;
+    margin: 5px;
+    top: 0;
+	
+}
+
+
+#header #cart {
+    float: right;
+    min-width: 0;
+    right: 0px;
+    top: 15px;
+	position: relative;
+}
+
+
+#header #cart .content {
+	right: 0;
+	top: 100%;
+	z-index: 20;
+	width: 380px;
+	overflow: hidden;
+	position: absolute;
+	margin-top: -999px;
+	background-color: #fff;
+}
+
+
+#header #cart.active .content {
+	margin-top: 0px;
+	border: 1px solid #ddd;
+}
+
+#header #search {
+    float: right;
+    /* position: relative; */ /*!! when set relative, overlap with menu */
+	position: absolute;		/* set position + top to center vertical align */
+    top: 50%;
+	right: 250px;
+    width: 200px;
+}
+
+#header .button-search {
+	position: absolute;
+	/*left: 0px;*/
+	background: url('../image/button-search.png') center center no-repeat;
+	width: 28px;
+	height: 24px;
+	/* border-right: 1px solid #CCCCCC;*/
+	cursor: pointer;
+}
+
+
+#header #welcome {
+	/*position: absolute;
+	top: 47px;
+	right: 0px;
+	z-index: 5;
+	width: 298px;
+	text-align: right;*/
+	color: #999999;
+	float: right;
+}
+#header .links {
+	/* position: absolute; 
+	right: 0px;
+	bottom: 3px;
+	font-size: 10px;
+	padding-right: 10px; */
+}
+
+#header #logo {
+	float: left;
+}
+
+#header #cart {
+    float: right;
+}
+
+#header #cart .heading {
+	background: none;
+	border: none;
+	margin: 0;
+	z-index: 20; 
+	/* 	#cart .content		z-index:	20;
+		slideshow: 			z-index: 	6; 
+		#mainmenu-toggle: 	z-index: 	7;
+		#search: 			z-index:	15;		*/
+	
+}
+
+/*	---------------------------
+		#topmenu - > #menu
+	---------------------------	*/
+
+#menu > ul {
+	
+}
+
+#mainmenu-toggle {
+	display: none;	/* hide toggle button as default */
+}	
+
+.menuclear:after {
+	clear: both;
+}
+
+.menuclear {
+	*zoom: 1;
+}
+
+
+/*	---------------------------
+		#content 
+	---------------------------	*/
+
+#content-wrapper {
+	float: left;
+}
+ 
+#content {
+	/* float: left; */ /* !!!! can not be set left */
+}
+#content .content {
+	padding: 10px;
+	overflow: auto;
+	margin-bottom: 20px;
+	border: 1px solid #EEEEEE;
+}
+#content .content .left {
+	float: left;
+	width: 49%;
+}
+#content .content .right {
+	float: right;
+	width: 49%;
+}
+
+/*	------------------------------
+		#content -> .slideshow
+	-----------------------------	*/
+	
+#content .slideshow {
+	width: 100%;
+	overflow: hidden; /* !! hide overflow sliding photo */
+	float: left;
+}
+
+
+/*	-----------------------------
+		#box-product
+	----------------------------- */
+
+
+.box-product > div {
+	display: inline-block;
+	vertical-align: top;
+	width: 18%;
+	padding: 0.5%;
+	float: left;
+	text-align: center; 		/* center text */
+	white-space: nowrap;		/* no wrap text */
+	margin-right: 0px;			/* remove default right margin */
+}
+
+.box-product div div {
+	display: block;
+	overflow: hidden;
+}
+
+.box-product .image:hover {
+	/* width: 119px; */
+	border: 1px solid #E7E7E7;
+}
+
+.box-product .image img {
+	/*border: 1px solid #E7E7E7;*/
+	width: 150px;
+	vertical-align: middle;
+	border: none; 				/* remove default border */
+	padding: 0px; 				/* remove default padding */
+}
+
+
+.box-product .image img:hover {
+	/*border-color: #E15452;  		*/
+}
+
+
+
+/*	----------------------------
+		#footer
+	----------------------------	*/ 
+#footer .column {
+	float: left;
+	width: 25%;
+	min-height: 100px;
+}
+
+#powered {
+	margin-top: 5px;
+	text-align: center;
+	clear: both;
+}
+

@@ -1,0 +1,281 @@
+/**---------------------------------------------------------------
+--  Copyright             :  2014
+--  Author                :  JOHN J YIN
+--	Email				  :	 john.yin@ebizdesigner.com
+--  Version               :  0.1
+--  Date                  :  16/02/2014
+--  Description           :  one extension of Opencart Default theme
+--                           to support mobile, tablet
+--
+--  History               :
+--      <author>   <time>      <version >       <desc>
+--      JOHN      16/02/2014       0.1         build
+---------------------------------------------------------------**/
+@media screen and (max-width: 980px) {
+
+/* -------------------------
+	WRAPPER 
+	- for left and right margin
+   -------------------------*/
+.wrapper {   
+    margin: 0 20px;
+    width: auto;
+}
+
+#container {
+	width: 100%;
+}
+
+#topbar #welcome {
+    display: none;
+}
+#column-left + #content, #column-right + #content {
+    width: 615px;
+}
+
+}
+
+@media screen and (max-width: 980px) {
+
+.box-product > div {
+	width: 31%;
+	padding: 1%;
+}
+
+.jcarousel-skin-opencart {
+	display: none;
+}
+
+#toppanel #search {
+    margin: 0px;
+    width: 100%;
+	position: relative;
+	right: 0px;
+}
+#toppanel #search-inner {
+    display: block;
+}
+#header #search  input {
+	padding: 0 0 0 30px;
+	width: 95%;
+    width: calc(100% - 32px);
+	width: -moz-calc(100% - 32px);
+}
+
+}
+
+@media screen and (max-width: 640px) {
+
+/*	---------------------------
+		#topmenu - > #menu
+	---------------------------	*/
+
+#menu {
+	border-radius: 0;		/* remove default radius */
+	padding: 0px;			/* remove default padding */
+}
+
+#menu > a {
+	font-weight: bold;
+    text-transform: uppercase;
+}
+
+#menu > a,
+#menu > ul > li > a,
+#menu > ul > li > div > ul > li > a {
+	font-family: "Roboto Condensed", sans-serif;
+    font-size: 14px;
+    height: 22px;
+    line-height: 22px;
+    padding: 12px 1%;
+	text-decoration: none;
+	z-index: 7;
+	width: 98%;
+}
+
+#menu > ul {
+	display: none;
+	width: 100%;
+}
+
+#menu > ul > li { 
+	background: #585858;
+	display: block;
+	float: none;
+	vertical-align: middle;
+}
+
+#menu > ul > li:hover > a {
+	background: #585858;
+	-webkit-border-radius: 0px;
+	-moz-border-radius: 0px;
+	-khtml-border-radius: 0px;
+	border-radius: 0px;
+	/* box-shadow: 2px 0 10px -5px rgba(0, 0, 0, 0.6) inset, -2px 0 10px -5px rgba(0, 0, 0, 0.6) inset;*/
+}
+#menu > ul > li > div {
+	display: none;
+	position: relative;
+	z-index: 6;
+	padding: 0px;				/* remove default padding */
+	margin: 0 0 0 10px;  		/* move to right indicate 2nd level menu*/
+	background: none;			/* remove default background */
+	border: none;				/* remove default border */
+}
+#menu > ul > li:hover > div {
+	display: block;
+}
+#menu > ul > li > div ul {
+	display: block;
+}
+#menu > ul > li > div ul > li a:hover {
+	background: #DBDBDB;
+}
+
+
+
+#mainmenu-toggle {
+	display: block;
+	background-color: #283744;
+	width: 100%;
+	position: relative;
+	text-align: left;
+}
+	
+#menu #mainmenu-toggle:after {
+	content:" ";
+	background: url('../image/menu-tog-icon.png') no-repeat;
+	width: 30px;
+	height: 30px;
+	display: inline-block;
+	position: absolute;
+	right: 15px;
+}
+
+/*	-----------------------
+		#cart
+	----------------------- */
+#header #cart {
+    height: 60px;
+    margin: 0 auto;
+	display: block;
+}
+
+#cart .h4, 
+#cart a {
+	float: left;
+}
+
+/*	---------------------------
+		#slideshow
+	--------------------------- */
+.slideshow .nivoSlider {
+	background-size: contain;
+}
+
+
+	
+/*	---------------------
+		.box-product
+	--------------------- */
+.box-product {
+	overflow: hidden;
+}
+	
+.box-product > div {
+	width: 45%;
+	padding: 1%;
+}
+
+#footer .column {
+    width: 95%;
+	text-align: center;
+}
+
+
+
+/*	--------------------------------------
+ *
+ *	 ---			Product List 		--
+ *
+ *	-------------------------------------- */
+
+/*	-------------------
+		#column-left
+	------------------- */
+#column-left {
+    clear: both;
+    float: none;
+    margin: 0 auto;
+    width: calc(100% - 40px);
+}
+
+#column-left + #content, 
+#column-right + #content {
+    margin: 20px;
+}
+
+#column-left + #content, #column-right + #content {
+	width: auto;
+}
+#content {
+    clear: both;
+    margin: 20px;
+    width: calc(100% - 40px);
+}
+
+
+#column-left > .banner {
+	display: none;			/* hide banner */
+}
+
+/*	--------------------------------------
+ *
+ *	 ---		Product Details 		--
+ *
+ *	-------------------------------------- */
+ 
+ #column-right {
+    clear: both;
+    float: none;
+    margin: 0 auto;
+    width: calc(100% - 40px);
+}
+
+.product-info > .left {
+    clear: both;
+    float: none;
+    width: calc(100% - 40px);
+}
+
+.product-info .image-additional {
+    clear: both;
+    overflow: hidden;
+    width: 100%;
+}
+
+.product-info > .left + .right {
+    margin-left: 0;
+}
+
+.product-info .image {
+	float: none;
+}
+
+#tabs.htabs a {
+	width: calc(100% - 32px);
+}
+
+
+}
+
+
+
+@media screen and (max-width: 480px) {
+
+.box-product > div {
+	width: 95%;
+	padding: 1%;
+}
+
+}
