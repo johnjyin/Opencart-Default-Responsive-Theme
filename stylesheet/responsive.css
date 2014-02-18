@@ -2,14 +2,15 @@
 --  Copyright             :  2014
 --  Author                :  JOHN J YIN
 --	Email				  :	 john.yin@ebizdesigner.com
---  Version               :  0.1
---  Date                  :  16/02/2014
+--  Version               :  0.2
+--  Date                  :  18/02/2014
 --  Description           :  one extension of Opencart Default theme
 --                           to support mobile, tablet
 --
 --  History               :
 --      <author>   <time>      <version >       <desc>
---      JOHN      16/02/2014       0.1         build
+--      JOHN	16/02/2014	0.2		initial
+--		 - 		18/02/2014	0.2		test all common browsers 
 ---------------------------------------------------------------**/
 @media screen and (max-width: 980px) {
 
@@ -51,16 +52,69 @@
     width: 100%;
 	position: relative;
 	right: 0px;
+	top: 0px;								/* when full length, need for Chrome, Safari */
 }
 #toppanel #search-inner {
     display: block;
 }
 #header #search  input {
 	padding: 0 0 0 30px;
-	width: 95%;
+	margin: 0 0 3px;						/* for 2px box shadow of input */
+	width: 95%;								/* IE 8 */
+	width: -moz-calc(100% - 32px);			/* firefox 15- */
+	width: -webkit-calc(100% - 32px);		/* safari 6, chrome 25- */
     width: calc(100% - 32px);
-	width: -moz-calc(100% - 32px);
+
 }
+
+
+/*	--------------------------------------
+ *
+ *	- 	Product Details 	-
+ *
+ *	when in 980px, as for two columns, 
+ *	product photo and description column, 
+ *	be changed into one column
+ *
+ *	-------------------------------------- */
+
+#column-right {
+	margin-right: 20px;
+} 
+
+#column-right + #content {
+	margin-left: 20px;
+}
+ 
+.product-info > .left {
+    clear: both;
+    float: none;
+    width: 100%;
+	margin: 0 auto;
+}
+
+.product-info .image-additional {
+    clear: both;
+    overflow: hidden;
+    width: 100%;
+}
+
+.product-info > .left + .right {
+    margin-left: 0;
+}
+
+.product-info .image {
+	float: none;
+}
+
+.product-info > .right textarea {
+	margin: 0 auto;
+	width: 95%;								/* IE 8 */
+	width: -moz-calc(100% - 10px);			/* firefox 15- */
+	width: -webkit-calc(100% - 10px);		/* safari 6, chrome 25- */
+    width: calc(100% - 10px);
+}
+
 
 }
 
@@ -163,7 +217,7 @@
 
 #cart .h4, 
 #cart a {
-	float: left;
+	/* float: left; */
 }
 
 /*	---------------------------
@@ -207,6 +261,9 @@
     clear: both;
     float: none;
     margin: 0 auto;
+	width: 90%;								/* IE 8 */
+	width: -moz-calc(100% - 40px);			/* firefox 15- */
+	width: -webkit-calc(100% - 40px);		/* safari 6, chrome 25- */
     width: calc(100% - 40px);
 }
 
@@ -221,6 +278,9 @@
 #content {
     clear: both;
     margin: 20px;
+	width: 80%;								/* IE 8 */
+	width: -moz-calc(100% - 40px);			/* firefox 15- */
+	width: -webkit-calc(100% - 40px);		/* safari 6, chrome 25- */
     width: calc(100% - 40px);
 }
 
@@ -239,31 +299,37 @@
     clear: both;
     float: none;
     margin: 0 auto;
+	width: 90%; 							/* no support calc(), IE8- */
+	width: -moz-calc(100% - 40px);			/* firefox 15- */	
+	width: -webkit-calc(100% - 40px); 		/* chrome 25-, safari 6 */
     width: calc(100% - 40px);
 }
 
-.product-info > .left {
-    clear: both;
-    float: none;
-    width: calc(100% - 40px);
-}
 
-.product-info .image-additional {
-    clear: both;
-    overflow: hidden;
-    width: 100%;
-}
 
-.product-info > .left + .right {
-    margin-left: 0;
-}
 
-.product-info .image {
-	float: none;
+
+#tabs.htabs { 
+	overflow: hidden;
 }
 
 #tabs.htabs a {
-	width: calc(100% - 32px);
+	overflow: hidden;
+    padding: 7px 2%;						/* must be 7px for line height is 30px */
+	font-weight: normal;					/* remove bold as default */
+	
+	width: 18%;								/* IE 8 */
+	width: -moz-calc((100% - 32px) / 5);	/* firefox 15- */
+	width: -webkit-calc((100% - 32px) / 5);	/* chrome 25-, safari 6 */
+	width: calc((100% - 32px) / 5);	
+}
+
+.tab-content {
+	float: left;
+	width: 80%;								/* IE 8 */
+	width: -moz-calc(100% - 20px);			/* firefox 15- */
+	width: -webkit-calc(100% - 20px);		/* chrome 25-, safari 6 */
+	width: calc(100% - 20px);				/* streth full width when one children */
 }
 
 
@@ -277,5 +343,10 @@
 	width: 95%;
 	padding: 1%;
 }
+
+}
+
+@media screen and (max-width: 320px) {
+
 
 }

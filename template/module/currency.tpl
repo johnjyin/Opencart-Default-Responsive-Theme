@@ -2,8 +2,8 @@
 --  Copyright             :  2014
 --  Author                :  JOHN J YIN
 --	Email				  :	 john.yin@ebizdesigner.com
---  Version               :  0.1
---  Date                  :  16/02/2014
+--  Version               :  0.2
+--  Date                  :  18/02/2014
 --  Description           :  one extension of Opencart Default theme
 --                           to support mobile, tablet
 --                         
@@ -12,7 +12,8 @@
 --
 --  History               :
 --      <author>   <time>      <version >       <desc>
---      JOHN      16/02/2014       0.1          
+--      JOHN	16/02/2014	0.2		initial
+--		 - 		18/02/2014	0.2		test all common browsers 
 --------------------------------------------------------------- --->
 
 <?php if (count($currencies) > 1) { ?>

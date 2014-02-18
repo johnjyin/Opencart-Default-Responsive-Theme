@@ -2,8 +2,8 @@
 --  Copyright             :  2014
 --  Author                :  JOHN J YIN
 --	Email				  :	 john.yin@ebizdesigner.com
---  Version               :  0.1
---  Date                  :  16/02/2014
+--  Version               :  0.2
+--  Date                  :  18/02/2014
 --  Description           :  one extension of Opencart Default theme
 --                           to support mobile, tablet
 --                         
@@ -12,7 +12,8 @@
 --
 --  History               :
 --      <author>   <time>      <version >       <desc>
---      JOHN      16/02/2014       0.1          
+--      JOHN	16/02/2014	0.2		initial
+--		 - 		18/02/2014	0.2		test all common browsers 
 --------------------------------------------------------------- */
 /*	-------------------------
 		global
@@ -63,10 +64,11 @@
 	-------------------------------- */
 
 #header {
-    height: auto;			/* !! important to make sure not overlap with slideshow */
+    height: auto;					/* !!important to not overlap with slideshow */
     margin-bottom: 0;
     padding-bottom: 0;
     position: relative;
+	/* overflow: hidden; */			/* would cut off drop menu */
 }
 
 #header #topbar {
@@ -116,25 +118,48 @@
 	
 }
 
+/* ------------------------
+	#header  ->  #cart
+ * ------------------------- */
 
 #header #cart {
     float: right;
     min-width: 0;
-    right: 0px;
+    position: relative;
+    right: 0;
     top: 15px;
-	position: relative;
+    z-index: 16;
 }
 
+/*
+ 		#search: 			z-index:	15;
+		#cart				z-index: 	16;
+		#cart .content		z-index:	20;
+		slideshow: 			z-index: 	6; 
+		#mainmenu-toggle: 	z-index: 	7;
+*/
+
+#header #cart.active {
+	background-color: #fff;		/* hide search or menu */
+}
+
+#header #cart .heading {
+	background: none;
+	border: none;
+	margin: 0;
+}
 
 #header #cart .content {
 	right: 0;
 	top: 100%;
-	z-index: 20;
 	width: 380px;
 	overflow: hidden;
 	position: absolute;
-	margin-top: -999px;
-	background-color: #fff;
+	margin-top: -999px;							
+	-webkit-border-radius: 0px 0px 7px 7px;	/* remove top-right radius */
+	-moz-border-radius: 0px 0px 7px 7px;
+	-khtml-border-radius: 0px 0px 7px 7px;
+	border-radius: 0px 0px 7px 7px;
 }
 
 
@@ -143,12 +168,16 @@
 	border: 1px solid #ddd;
 }
 
+/* -------------------------
+	#header  ->  #search
+   ------------------------- */
+
 #header #search {
     float: right;
     /* position: relative; */ /*!! when set relative, overlap with menu */
-	position: absolute;		/* set position + top to center vertical align */
-    top: 50%;
-	right: 250px;
+	position: relative;		/* set position + top to center vertical align */
+    top: 25px;
+	right: 100px;
     width: 200px;
 }
 
@@ -157,8 +186,8 @@
 	/*left: 0px;*/
 	background: url('../image/button-search.png') center center no-repeat;
 	width: 28px;
-	height: 24px;
-	/* border-right: 1px solid #CCCCCC;*/
+	height: 26px;
+	border-right: none;		/* remove search icon right border */
 	cursor: pointer;
 }
 
@@ -185,21 +214,7 @@
 	float: left;
 }
 
-#header #cart {
-    float: right;
-}
 
-#header #cart .heading {
-	background: none;
-	border: none;
-	margin: 0;
-	z-index: 20; 
-	/* 	#cart .content		z-index:	20;
-		slideshow: 			z-index: 	6; 
-		#mainmenu-toggle: 	z-index: 	7;
-		#search: 			z-index:	15;		*/
-	
-}
 
 /*	---------------------------
 		#topmenu - > #menu
@@ -307,6 +322,10 @@
 	float: left;
 	width: 25%;
 	min-height: 100px;
+}
+
+#footer .column ul li {
+	padding-left: 1px;
 }
 
 #powered {
