@@ -9,8 +9,9 @@
 --
 --  History               :
 --      <author>   <time>      <version >       <desc>
---      JOHN	16/02/2014	0.2		initial
---		 - 		18/02/2014	0.2		test all common browsers 
+--      JOHN	16/02/2014	0.1		initial
+--		- 		18/02/2014	0.2		test all common browsers 
+--		-		19/02/2014			+ #column-left style
 ---------------------------------------------------------------**/
 @media screen and (max-width: 980px) {
 
@@ -30,13 +31,7 @@
 #topbar #welcome {
     display: none;
 }
-#column-left + #content, #column-right + #content {
-    width: 615px;
-}
 
-}
-
-@media screen and (max-width: 980px) {
 
 .box-product > div {
 	width: 31%;
@@ -55,16 +50,25 @@
 	top: 0px;								/* when full length, need for Chrome, Safari */
 }
 #toppanel #search-inner {
-    display: block;
+    display: table;
+	width: 100%;
 }
 #header #search  input {
-	padding: 0 0 0 30px;
+	padding: 2px;							/* leave space between input and border */
 	margin: 0 0 3px;						/* for 2px box shadow of input */
-	width: 95%;								/* IE 8 */
-	width: -moz-calc(100% - 32px);			/* firefox 15- */
-	width: -webkit-calc(100% - 32px);		/* safari 6, chrome 25- */
-    width: calc(100% - 32px);
+	display: table-cell;
+    padding: 0;
+    width: 100%;
+	/* width: 95%;								/* IE 8 */
+	/* width: -moz-calc(100% - 32px);			/* firefox 15- */
+	/* width: -webkit-calc(100% - 32px);		/* safari 6, chrome 25- */
+    /* width: calc(100% - 32px); */
+}
 
+#header .button-search {
+	position: relative;
+	float: left;
+	top: 10px;
 }
 
 
@@ -80,10 +84,30 @@
 
 #column-right {
 	margin-right: 20px;
-} 
-
+}
 #column-right + #content {
 	margin-left: 20px;
+}
+
+#column-left {
+	margin-left: 20px;
+}
+#column-left + #content {
+	margin-right: 20px;
+}
+
+#column-left + #content, 
+#column-right + #content {
+    width: 70%; 							/* IE 8, better than be fixed 615px */
+	width: -moz-calc(100% - 240px);			/* firefox 15- */
+	width: -webkit-calc(100% - 240px);		/* Safari 6, Chrome 25- */
+	width: calc(100% - 240px);
+	
+}
+
+#column-left + #column-right + #content, 
+#column-left + #content {
+    margin-left: 220px;				/* column-left (180px) + left margin(20px) + space (20px) */
 }
  
 .product-info > .left {
@@ -125,8 +149,10 @@
 	---------------------------	*/
 
 #menu {
-	border-radius: 0;		/* remove default radius */
-	padding: 0px;			/* remove default padding */
+	border-radius: 0;						/* remove default radius */
+	padding: 0px;							/* remove default padding */
+	box-shadow: none;
+	height: 45px;
 }
 
 #menu > a {
@@ -171,10 +197,10 @@
 	display: none;
 	position: relative;
 	z-index: 6;
-	padding: 0px;				/* remove default padding */
-	margin: 0 0 0 10px;  		/* move to right indicate 2nd level menu*/
-	background: none;			/* remove default background */
-	border: none;				/* remove default border */
+	padding: 0px;						/* remove default padding */
+	margin: 0 0 0 10px;  				/* move to right indicate 2nd level menu*/
+	background: none;					/* remove default background */
+	border: none;						/* remove default border */
 }
 #menu > ul > li:hover > div {
 	display: block;

@@ -12,8 +12,9 @@
 --
 --  History               :
 --      <author>   <time>      <version >       <desc>
---      JOHN	16/02/2014	0.2		initial
+--      JOHN	16/02/2014	0.1		initial
 --		 - 		18/02/2014	0.2		test all common browsers 
+--		-		20/02/2014	0.3		update search input style & method
 --------------------------------------------------------------- */
 /*	-------------------------
 		global
@@ -183,12 +184,22 @@
 
 #header .button-search {
 	position: absolute;
+	top: 0px;
 	/*left: 0px;*/
 	background: url('../image/button-search.png') center center no-repeat;
 	width: 28px;
 	height: 26px;
 	border-right: none;		/* remove search icon right border */
 	cursor: pointer;
+}
+
+#header .input-search {
+	width: 100%;
+}
+
+#header .input-search-wrapper {
+	display: table-cell;
+    width: 100%;
 }
 
 
@@ -220,8 +231,8 @@
 		#topmenu - > #menu
 	---------------------------	*/
 
-#menu > ul {
-	
+#menu {
+	box-shadow: 0 2px 0 #DDDDDD;
 }
 
 #mainmenu-toggle {
@@ -285,9 +296,9 @@
 	width: 18%;
 	padding: 0.5%;
 	float: left;
-	text-align: center; 		/* center text */
-	white-space: nowrap;		/* no wrap text */
-	margin-right: 0px;			/* remove default right margin */
+	text-align: center; 				/* center text */
+	white-space: nowrap;				/* no wrap text */
+	margin-right: 0px;					/* remove default right margin */
 }
 
 .box-product div div {
@@ -304,8 +315,8 @@
 	/*border: 1px solid #E7E7E7;*/
 	width: 150px;
 	vertical-align: middle;
-	border: none; 				/* remove default border */
-	padding: 0px; 				/* remove default padding */
+	border: none; 						/* remove default border */
+	padding: 0px; 						/* remove default padding */
 }
 
 

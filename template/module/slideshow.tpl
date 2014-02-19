@@ -13,7 +13,8 @@
 --  History               :
 --      <author>   <time>      <version >       <desc>
 --      JOHN	16/02/2014	0.2		initial
---		 - 		18/02/2014	0.2		test all common browsers          
+--		 - 		18/02/2014	0.2		test all common browsers    
+--		-		20/02/2014	0.3		+ window.innerWidth()      
 --------------------------------------------------------------- --->
 
 <div class="slideshow">
@@ -46,17 +47,19 @@ $(document).ready(function() {
 		if (res){clearTimeout(res)};
 		res = setTimeout( 
 			function(){
-				var new_width 	=	$(window).width();
+				var new_width 	=	window.innerWidth || $(window).width();
 				var new_height 	=	Math.round( (new_width - fixed_padding) * (def_img_height / def_img_width) );	
 				if ( new_width >= 980 ){
-					$(nivo_slide_container).css({ "height": "450px", "width": "100%" });
+					$(nivo_slide_container).css({ "height": "450px", "width": "980px" });
 				} else {
 					$(nivo_slide_container).css({ "height": new_height + 'px', "width": new_width + 'px' }); 
-					$(nivo_slide_container).css({ "background-size": new_width + 'px ' + new_height + 'px' });
+					$(nivo_slide_container).css({ "background-size": "100% !important" });
+					$(nivo_slide_container).css({ "-webkit-background-size": new_width + 'px ' + new_height + 'px',
+													"-moz-background-size": new_width + 'px ' + new_height + 'px',
+													"background-size": new_width + 'px ' + new_height + 'px'});
 				}
 			}, 500 );
-	});
-	$(window).trigger('resize');
+	}).trigger('resize');
 });
 
 -->

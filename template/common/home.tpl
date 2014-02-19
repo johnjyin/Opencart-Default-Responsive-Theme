@@ -12,8 +12,9 @@
 --
 --  History               :
 --      <author>   <time>      <version >       <desc>
---      JOHN	16/02/2014	0.2		initial
---		 - 		18/02/2014	0.2		test all common browsers        
+--      JOHN	16/02/2014	0.1		initial
+--		 - 		18/02/2014	0.2		test all common browsers 
+--		-		20/02/2014	0.3		-
 --------------------------------------------------------------- --->
 <?php echo $header; ?><?php echo $column_left; ?><?php echo $column_right; ?>
 <div id="content" class="wrapper"><?php echo $content_top; ?>

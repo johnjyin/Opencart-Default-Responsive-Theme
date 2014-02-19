@@ -12,8 +12,10 @@
 --
 --  History               :
 --      <author>   <time>      <version >       <desc>
---      JOHN	16/02/2014	0.2		initial
+--      JOHN	16/02/2014	0.1		initial
 --		 - 		18/02/2014	0.2		test all common browsers    
+--		-		20/02/2014	0.3		+ html5shiv.js, + normalize.css
+--									update search input method
 --------------------------------------------------------------- --->
 
 <!DOCTYPE html>
@@ -35,14 +37,18 @@
 <?php foreach ($links as $link) { ?>
 <link href="<?php echo $link['href']; ?>" rel="<?php echo $link['rel']; ?>" />
 <?php } ?>
+<link rel="stylesheet" type="text/css" href="catalog/view/theme/defaultresponsive/stylesheet/normalize.css" />
 <link rel="stylesheet" type="text/css" href="catalog/view/theme/default/stylesheet/stylesheet.css" />
-<link rel="stylesheet" type="text/css" href="catalog/view/theme/defaultmobile2/stylesheet/stylesheet.css" />
-<link rel="stylesheet" type="text/css" href="catalog/view/theme/defaultmobile2/stylesheet/responsive.css" />
+<link rel="stylesheet" type="text/css" href="catalog/view/theme/defaultresponsive/stylesheet/stylesheet.css" />
+<link rel="stylesheet" type="text/css" href="catalog/view/theme/defaultresponsive/stylesheet/responsive.css" />
 <?php foreach ($styles as $style) { ?>
 <link rel="<?php echo $style['rel']; ?>" type="text/css" href="<?php echo $style['href']; ?>" media="<?php echo $style['media']; ?>" />
 <?php } ?>
 <script type="text/javascript" src="catalog/view/javascript/jquery/jquery-1.7.1.min.js"></script>
 <script type="text/javascript" src="catalog/view/javascript/jquery/ui/jquery-ui-1.8.16.custom.min.js"></script>
+<!--[if lt IE 9]>
+<script src="catalog/view/theme/defaultresponsive/js/html5shiv.js"></script>
+<![endif]-->
 <link rel="stylesheet" type="text/css" href="catalog/view/javascript/jquery/ui/themes/ui-lightness/jquery-ui-1.8.16.custom.css" />
 <script type="text/javascript" src="catalog/view/javascript/common.js"></script>
 <?php foreach ($scripts as $script) { ?>
@@ -99,8 +105,8 @@ $('body').prepend('<iframe src="<?php echo $store; ?>" style="display: none;"></
   <?php echo $cart; ?>
   <div id="search">
   <div id="search-inner">
-        <div class="button-search"></div>
-        <input type="text" name="search" placeholder="<?php echo $text_search; ?>" value="<?php echo $search; ?>" />
+        <div class="input-search-wrapper"><input type="text" name="search" class="input-search" placeholder="<?php echo $text_search; ?>" value="<?php echo $search; ?>" /></div>
+ 		<div class="button-search"></div> 
   </div>
   </div>
   <div class="clearbreak"></div>

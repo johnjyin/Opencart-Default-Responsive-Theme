@@ -12,8 +12,9 @@
 --
 --  History               :
 --      <author>   <time>      <version >       <desc>
---      JOHN	16/02/2014	0.2		initial
+--      JOHN	16/02/2014	0.1		initial
 --		 - 		18/02/2014	0.2		test all common browsers 
+--		-		20/02/2014	0.3		-
 --------------------------------------------------------------- --->
 
 <?php if (count($currencies) > 1) { ?>
