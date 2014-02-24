@@ -15,6 +15,7 @@
 --		-		23/02/2014	0.4		fix table-cell not working by float
 --		-		-			-		update #footer, #topbar style
 --		-		-			-		+ #content 	left/right margin
+--		-		-			-		set input width=n% width>640px or <640px
 ---------------------------------------------------------------**/
 @media screen and (max-width: 980px) {
 
@@ -146,6 +147,11 @@
 }
 
 
+input.large-field, select.large-field {
+    width: 90%;
+}
+
+
 }
 
 @media screen and (max-width: 640px) {
@@ -178,6 +184,7 @@
 	text-decoration: none;
 	z-index: 7;
 	width: 98%;
+	background: #585858;
 }
 
 #menu > ul {
@@ -366,6 +373,37 @@
 }
 
 
+/*	-------------------------------
+		#content -> OrderInformation
+		
+	-------------------------------	*/
+#content .content .left {
+	float: none;
+	width: 100%;
+}
+#content .content .right {
+	float: none;
+	width: 100%;
+}
+
+input.large-field, select.large-field {
+    width: 98%;
+}
+
+#return-product .return-name,
+#return-product .return-model,
+#return-product .return-code,
+#return-product .return-reason,
+#return-product .return-opened,
+#return-product .return-captcha{
+	float: none;
+	width: 100%;
+}
+
+#return-product input[type="text"], 
+#return-product input[type="password"], 
+#return-product textarea {
+	width: 98%;
 }
 
 
@@ -378,7 +416,7 @@
 }
 
 #header {
-    text-align: center;
+    text-align: left;
 }
 
 #header #topbar {
