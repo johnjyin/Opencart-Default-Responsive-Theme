@@ -11,7 +11,10 @@
 --      <author>   <time>      <version >       <desc>
 --      JOHN	16/02/2014	0.1		initial
 --		- 		18/02/2014	0.2		test all common browsers 
---		-		19/02/2014			+ #column-left style
+--		-		19/02/2014	-		+ #column-left style
+--		-		23/02/2014	0.4		fix table-cell not working by float
+--		-		-			-		update #footer, #topbar style
+--		-		-			-		+ #content 	left/right margin
 ---------------------------------------------------------------**/
 @media screen and (max-width: 980px) {
 
@@ -57,18 +60,19 @@
 	padding: 2px;							/* leave space between input and border */
 	margin: 0 0 3px;						/* for 2px box shadow of input */
 	display: table-cell;
-    padding: 0;
+    padding: 0;	
     width: 100%;
-	/* width: 95%;								/* IE 8 */
-	/* width: -moz-calc(100% - 32px);			/* firefox 15- */
-	/* width: -webkit-calc(100% - 32px);		/* safari 6, chrome 25- */
+	float: left;							/* fix table-cell not working in IE9- */
+	/* width: 95%;							/* IE 8 */
+	/* width: -moz-calc(100% - 32px);		/* firefox 15- */
+	/* width: -webkit-calc(100% - 32px);	/* safari 6, chrome 25- */
     /* width: calc(100% - 32px); */
 }
 
 #header .button-search {
 	position: relative;
 	float: left;
-	top: 10px;
+	/* top: 10px; */
 }
 
 
@@ -76,25 +80,27 @@
  *
  *	- 	Product Details 	-
  *
- *	when in 980px, as for two columns, 
+ *	when =< 980px, as for two columns, 
  *	product photo and description column, 
- *	be changed into one column
+ *	to be changed into one column
  *
  *	-------------------------------------- */
 
-#column-right {
+#content,									/* only #content, like when Category */
+											/* will be covered when #column-left + #content */
+#column-right,								/* only #column-right, like when Product 
+											/* & screen width < 980px */
+#column-left + #content{						/* like when Sub-Category */
 	margin-right: 20px;
 }
+
+#content,	
+#column-left,
 #column-right + #content {
 	margin-left: 20px;
 }
 
-#column-left {
-	margin-left: 20px;
-}
-#column-left + #content {
-	margin-right: 20px;
-}
+
 
 #column-left + #content, 
 #column-right + #content {
@@ -163,6 +169,7 @@
 #menu > a,
 #menu > ul > li > a,
 #menu > ul > li > div > ul > li > a {
+	color: #FFF;
 	font-family: "Roboto Condensed", sans-serif;
     font-size: 14px;
     height: 22px;
@@ -216,7 +223,7 @@
 
 #mainmenu-toggle {
 	display: block;
-	background-color: #283744;
+	/* background-color: #283744; */
 	width: 100%;
 	position: relative;
 	text-align: left;
@@ -269,7 +276,7 @@
 
 #footer .column {
     width: 95%;
-	text-align: center;
+	text-align: left;
 }
 
 
@@ -369,6 +376,46 @@
 	width: 95%;
 	padding: 1%;
 }
+
+#header {
+    text-align: center;
+}
+
+#header #topbar {
+    /* color: #FFFFFF;*/
+    font-size: 12px;
+}
+
+#topbar form {
+    display: inline-block;
+}
+
+#topbar form,
+#topbar #welcome,
+#topbar .links  {
+    display: inline-block;
+    float: none;
+    margin: 5px auto;
+    position: relative;
+    text-align: center;
+    top: 0;
+    width: auto;
+}
+
+#topbar #welcome a {
+    /* font-weight: 700; */
+}
+
+#topbar .links {
+    clear: both;
+}
+
+#footer .column {
+	float: none;
+	margin: auto;
+	width: auto;
+}
+
 
 }
 
