@@ -16,18 +16,24 @@
 --		 - 		18/02/2014	0.2		test all common browsers    
 --		-		20/02/2014	0.3		+ html5shiv.js, + normalize.css
 --									update search input method
+--		-		23/02/2014	0.4		+ css3-mediaqueries.js
+--		-		-			-		+ X-UA-Compatible IE=edge,
+--									so as IE9- working by responsive
+--		-		-			-		update #topbar structure
+--		-		-			-		update viewport meta
 --------------------------------------------------------------- --->
 
 <!DOCTYPE html>
 <html dir="<?php echo $direction; ?>" lang="<?php echo $lang; ?>">
 <head>
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
 <meta charset="UTF-8" />
 <title><?php echo $title; ?></title>
 <base href="<?php echo $base; ?>" />
 <?php if ($description) { ?>
 <meta name="description" content="<?php echo $description; ?>" />
 <?php } ?>
-<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no," />
 <?php if ($keywords) { ?>
 <meta name="keywords" content="<?php echo $keywords; ?>" />
 <?php } ?>
@@ -47,6 +53,7 @@
 <script type="text/javascript" src="catalog/view/javascript/jquery/jquery-1.7.1.min.js"></script>
 <script type="text/javascript" src="catalog/view/javascript/jquery/ui/jquery-ui-1.8.16.custom.min.js"></script>
 <!--[if lt IE 9]>
+<script src="http://css3-mediaqueries-js.googlecode.com/svn/trunk/css3-mediaqueries.js"></script>
 <script src="catalog/view/theme/defaultresponsive/js/html5shiv.js"></script>
 <![endif]-->
 <link rel="stylesheet" type="text/css" href="catalog/view/javascript/jquery/ui/themes/ui-lightness/jquery-ui-1.8.16.custom.css" />
@@ -79,21 +86,23 @@ $('body').prepend('<iframe src="<?php echo $store; ?>" style="display: none;"></
 <div id="container">
 <div id="header" class="clearafter">
  
-<div id="topbar" class="wrapper clearafter">
+<div id="topbar">
+  <div class="wrapper clearafter">
   <?php echo $language; ?>
   <?php echo $currency; ?>
+   <div id="welcome">
+   <?php if (!$logged) { ?>
+    <?php echo $text_welcome; ?>
+    <?php } else { ?>
+    <?php echo $text_logged; ?>
+    <?php } ?>
+  </div>
   <div class="links">
     <a href="<?php echo $wishlist; ?>" id="wishlist-total" class="icon-wishlist"><?php echo $text_wishlist; ?></a>
     <a href="<?php echo $account; ?>" id="link-account" class="icon-user"><?php echo $text_account; ?></a>
     <a href="<?php echo $shopping_cart; ?>" id="link-cart" class="icon-cart"><?php echo $text_shopping_cart; ?></a>
     <a href="<?php echo $checkout; ?>" id="link-checkout" class="icon-checkout"><?php echo $text_checkout; ?></a>
   </div>
-  <div id="welcome">
-    <?php if (!$logged) { ?>
-    <?php echo $text_welcome; ?>
-    <?php } else { ?>
-    <?php echo $text_logged; ?>
-    <?php } ?>
   </div>
 </div>
 
