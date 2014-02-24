@@ -16,6 +16,7 @@
 --		-		-			-		update #footer, #topbar style
 --		-		-			-		+ #content 	left/right margin
 --		-		-			-		set input width=n% width>640px or <640px
+--		-		-			-		center header text when width < 640px
 ---------------------------------------------------------------**/
 @media screen and (max-width: 980px) {
 

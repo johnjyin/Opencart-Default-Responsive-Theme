@@ -19,6 +19,7 @@
 --		-		-			-		update #footer style
 --		-		-			-		+ .box-product .image hold 1px border
 --		-		-			-		+ body overflow hidden scroll bar when width 964px ~ 980px
+--		-		-			-		center header text when width < 640px
 --------------------------------------------------------------- */
 /*	-------------------------
 		global
@@ -94,6 +95,7 @@ h1, .welcome {
 
 #topbar .wrapper {
     padding: 1px 0;
+	text-align: center;						/* center currency text when < 640px*/
 }
 
 #header #topbar {
