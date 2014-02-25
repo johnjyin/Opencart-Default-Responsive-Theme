@@ -1,32 +1,6 @@
-<!--- ---------------------------------------------------------------
---  Copyright             :  2014
---  Author                :  JOHN J YIN
---	Email				  :	 john.yin@ebizdesigner.com
---  Version               :  0.2
---  Date                  :  18/02/2014
---  Description           :  one extension of Opencart Default theme
---                           to support mobile, tablet
---                         
---                           based on Opencart(v1.5.6) header.tpl 
---                           
---
---  History               :
---      <author>   <time>      <version >       <desc>
---      JOHN	16/02/2014	0.1		initial
---		 - 		18/02/2014	0.2		test all common browsers    
---		-		20/02/2014	0.3		+ html5shiv.js, + normalize.css
---									update search input method
---		-		23/02/2014	0.4		+ css3-mediaqueries.js
---		-		-			-		+ X-UA-Compatible IE=edge,
---									so as IE9- working by responsive
---		-		-			-		update #topbar structure
---		-		-			-		update viewport meta
---------------------------------------------------------------- --->
-
-<!DOCTYPE html>
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html dir="<?php echo $direction; ?>" lang="<?php echo $lang; ?>">
 <head>
-<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
 <meta charset="UTF-8" />
 <title><?php echo $title; ?></title>
 <base href="<?php echo $base; ?>" />
@@ -46,14 +20,16 @@
 <link rel="stylesheet" type="text/css" href="catalog/view/theme/defaultresponsive/stylesheet/normalize.css" />
 <link rel="stylesheet" type="text/css" href="catalog/view/theme/default/stylesheet/stylesheet.css" />
 <link rel="stylesheet" type="text/css" href="catalog/view/theme/defaultresponsive/stylesheet/stylesheet.css" />
+<![if (!IE)|(gte IE 9)]>
 <link rel="stylesheet" type="text/css" href="catalog/view/theme/defaultresponsive/stylesheet/responsive.css" />
+<![endif]>
 <?php foreach ($styles as $style) { ?>
 <link rel="<?php echo $style['rel']; ?>" type="text/css" href="<?php echo $style['href']; ?>" media="<?php echo $style['media']; ?>" />
 <?php } ?>
 <script type="text/javascript" src="catalog/view/javascript/jquery/jquery-1.7.1.min.js"></script>
 <script type="text/javascript" src="catalog/view/javascript/jquery/ui/jquery-ui-1.8.16.custom.min.js"></script>
 <!--[if lt IE 9]>
-<script src="http://css3-mediaqueries-js.googlecode.com/svn/trunk/css3-mediaqueries.js"></script>
+<script src="catalog/view/theme/defaultresponsive/js/css3-mediaqueries.js"></script>
 <script src="catalog/view/theme/defaultresponsive/js/html5shiv.js"></script>
 <![endif]-->
 <link rel="stylesheet" type="text/css" href="catalog/view/javascript/jquery/ui/themes/ui-lightness/jquery-ui-1.8.16.custom.css" />

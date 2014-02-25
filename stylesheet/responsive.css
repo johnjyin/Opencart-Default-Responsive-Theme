@@ -17,7 +17,11 @@
 --		-		-			-		+ #content 	left/right margin
 --		-		-			-		set input width=n% width>640px or <640px
 --		-		-			-		center header text when width < 640px
+--		-		-			-		move tabs style into max-width 980px
 ---------------------------------------------------------------**/
+
+/*	--------------------------------- 980 px ---------------------------------------------	*/
+
 @media screen and (max-width: 980px) {
 
 /* -------------------------
@@ -153,7 +157,34 @@ input.large-field, select.large-field {
 }
 
 
+#tabs.htabs { 
+	overflow: hidden; 
 }
+
+#tabs.htabs a {
+	overflow: hidden;
+    padding: 7px 2%;						/* must be 7px for line height is 30px */
+	font-weight: normal;					/* remove bold as default */
+	
+	width: 18%;								/* IE 8 */
+	width: -moz-calc((100% - 32px) / 5);	/* firefox 15- */
+	width: -webkit-calc((100% - 32px) / 5);	/* chrome 25-, safari 6 */
+	width: calc((100% - 32px) / 5);	
+}
+
+.tab-content {
+	float: left;
+	width: 80%;								/* IE 8 */
+	width: -moz-calc(100% - 20px);			/* firefox 15- */
+	width: -webkit-calc(100% - 20px);		/* chrome 25-, safari 6 */
+	width: calc(100% - 20px);				/* streth full width when one children */
+}
+
+
+}
+
+
+/* ------------------------------------ 640px ------------------------------------	*/
 
 @media screen and (max-width: 640px) {
 
@@ -274,7 +305,7 @@ input.large-field, select.large-field {
 		.box-product
 	--------------------- */
 .box-product {
-	overflow: hidden;
+	/* overflow: hidden; */
 }
 	
 .box-product > div {
@@ -348,32 +379,6 @@ input.large-field, select.large-field {
 
 
 
-
-
-#tabs.htabs { 
-	overflow: hidden;
-}
-
-#tabs.htabs a {
-	overflow: hidden;
-    padding: 7px 2%;						/* must be 7px for line height is 30px */
-	font-weight: normal;					/* remove bold as default */
-	
-	width: 18%;								/* IE 8 */
-	width: -moz-calc((100% - 32px) / 5);	/* firefox 15- */
-	width: -webkit-calc((100% - 32px) / 5);	/* chrome 25-, safari 6 */
-	width: calc((100% - 32px) / 5);	
-}
-
-.tab-content {
-	float: left;
-	width: 80%;								/* IE 8 */
-	width: -moz-calc(100% - 20px);			/* firefox 15- */
-	width: -webkit-calc(100% - 20px);		/* chrome 25-, safari 6 */
-	width: calc(100% - 20px);				/* streth full width when one children */
-}
-
-
 /*	-------------------------------
 		#content -> OrderInformation
 		
@@ -398,7 +403,8 @@ input.large-field, select.large-field {
 #return-product .return-opened,
 #return-product .return-captcha{
 	float: none;
-	width: 100%;
+	width: 95%;
+	margin-right: 0;				/* remove default margin-right: 15px */
 }
 
 #return-product input[type="text"], 
@@ -407,9 +413,15 @@ input.large-field, select.large-field {
 	width: 98%;
 }
 
+}
 
+
+
+/*	-------------------------------------- 480px ----------------------------------------- */
 
 @media screen and (max-width: 480px) {
+
+
 
 .box-product > div {
 	width: 95%;

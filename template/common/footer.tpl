@@ -1,19 +1,3 @@
-<!--- ---------------------------------------------------------------
---  Copyright             :  2014
---  Author                :  JOHN J YIN
---	Email				  :	 john.yin@ebizdesigner.com
---  Version               :  0.2
---  Date                  :  18/02/2014
---  Description           :  one extension of Opencart Default theme
---                           to support mobile, tablet
---                         
---                           based on Opencart(v1.5.6) header.tpl 
---                           
---
---  History               :
---      <author>   <time>      <version >       <desc>
---      JOHN	23/02/2014	0.4		+ wrapper+clearafter div
---------------------------------------------------------------- --->
 <div id="footer">
 <div class="wrapper clearafter">
   <?php if ($informations) { ?>
