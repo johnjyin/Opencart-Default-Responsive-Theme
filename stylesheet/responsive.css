@@ -1,4 +1,4 @@
-/**---------------------------------------------------------------
+/* ------------------------------------------------------------------
 --  Copyright             :  2014
 --  Author                :  JOHN J YIN
 --	Email				  :	 john.yin@ebizdesigner.com
@@ -18,16 +18,24 @@
 --		-		-			-		set input width=n% width>640px or <640px
 --		-		-			-		center header text when width < 640px
 --		-		-			-		move tabs style into max-width 980px
----------------------------------------------------------------**/
+--		-		04/03/2014	0.6		body mini-width: 300px
+--		-		-			-		responsive inputs when < 980px
+--		-		-			-		vertical #tabs when < 640px
+-------------------------------------------------------------------- */
 
-/*	--------------------------------- 980 px ---------------------------------------------	*/
+/* =================================================================
+
+							980px
+
+ * ================================================================= */
 
 @media screen and (max-width: 980px) {
 
-/* -------------------------
-	WRAPPER 
+
+/* ------------------------------------------------------------------
+		.wrapper 
 	- for left and right margin
-   -------------------------*/
+ * ------------------------------------------------------------------ */
 .wrapper {   
     margin: 0 20px;
     width: auto;
@@ -56,22 +64,23 @@
     width: 100%;
 	position: relative;
 	right: 0px;
-	top: 0px;								/* when full length, need for Chrome, Safari */
+	top: 0px;							/* when full length, need for Chrome, Safari */
 }
+
 #toppanel #search-inner {
     display: table;
 	width: 100%;
 }
 #header #search  input {
-	padding: 2px;							/* leave space between input and border */
-	margin: 0 0 3px;						/* for 2px box shadow of input */
+	padding: 2px;						/* leave space between input and border */
+	margin: 0 0 3px;					/* for 2px box shadow of input */
 	display: table-cell;
     padding: 0;	
     width: 100%;
-	float: left;							/* fix table-cell not working in IE9- */
-	/* width: 95%;							/* IE 8 */
-	/* width: -moz-calc(100% - 32px);		/* firefox 15- */
-	/* width: -webkit-calc(100% - 32px);	/* safari 6, chrome 25- */
+	float: left;						/* fix table-cell not working in IE9- */
+	/* width: 95%;						/* IE 8 */
+	/* width: -moz-calc(100% - 32px);	/* firefox 15- */
+	/* width: -webkit-calc(100% - 32px);/* safari 6, chrome 25- */
     /* width: calc(100% - 32px); */
 }
 
@@ -82,21 +91,20 @@
 }
 
 
-/*	--------------------------------------
- *
- *	- 	Product Details 	-
- *
- *	when =< 980px, as for two columns, 
- *	product photo and description column, 
- *	to be changed into one column
- *
- *	-------------------------------------- */
+/* ------------------------------------------------------------------
 
-#content,									/* only #content, like when Category */
-											/* will be covered when #column-left + #content */
-#column-right,								/* only #column-right, like when Product 
-											/* & screen width < 980px */
-#column-left + #content{						/* like when Sub-Category */
+	- 						Product Details 						-
+
+ 	when =< 980px, as for two columns, product photo and description
+    column, to be changed into one column
+
+	* ----------------------------------------------------------------- */
+
+#content,								/* only #content, like when Category */
+										/* will be covered when #column-left + #content */
+#column-right,							/* only #column-right, like when Product 
+										/* & screen width < 980px */
+#column-left + #content{					/* like when Sub-Category */
 	margin-right: 20px;
 }
 
@@ -110,16 +118,16 @@
 
 #column-left + #content, 
 #column-right + #content {
-    width: 70%; 							/* IE 8, better than be fixed 615px */
-	width: -moz-calc(100% - 240px);			/* firefox 15- */
-	width: -webkit-calc(100% - 240px);		/* Safari 6, Chrome 25- */
+    width: 70%; 						/* IE 8, better than be fixed 615px */
+	width: -moz-calc(100% - 240px);		/* firefox 15- */
+	width: -webkit-calc(100% - 240px);	/* Safari 6, Chrome 25- */
 	width: calc(100% - 240px);
 	
 }
 
 #column-left + #column-right + #content, 
 #column-left + #content {
-    margin-left: 220px;				/* column-left (180px) + left margin(20px) + space (20px) */
+    margin-left: 220px;					/* column-left (180px) + left margin(20px) + space (20px) */
 }
  
 .product-info > .left {
@@ -145,9 +153,9 @@
 
 .product-info > .right textarea {
 	margin: 0 auto;
-	width: 95%;								/* IE 8 */
-	width: -moz-calc(100% - 10px);			/* firefox 15- */
-	width: -webkit-calc(100% - 10px);		/* safari 6, chrome 25- */
+	width: 95%;							/* IE 8 */
+	width: -moz-calc(100% - 10px);		/* firefox 15- */
+	width: -webkit-calc(100% - 10px);	/* safari 6, chrome 25- */
     width: calc(100% - 10px);
 }
 
@@ -157,44 +165,66 @@ input.large-field, select.large-field {
 }
 
 
+
+/* ------------------------------------------------------------------
+	#content -> input
+	
+	- Product Details -> .Options -> textarea; input 
+	- Purchase a Gift Certificate
+	- Return Product
+ * ------------------------------------------------------------------ */
+
+#content input[type="text"], 
+#content input[type="password"], 
+#content textarea {
+    width: 98%;							/* capture full width of all 
+										   inputs' containers: table,
+										   tr, td */
+}
+
+
+/* ------------------------------------------------------------------
+	#tabs
+ * ------------------------------------------------------------------ */
+
 #tabs.htabs { 
 	overflow: hidden; 
 }
 
 #tabs.htabs a {
-	overflow: hidden;
-    padding: 7px 2%;						/* must be 7px for line height is 30px */
-	font-weight: normal;					/* remove bold as default */
-	
-	width: 18%;								/* IE 8 */
-	width: -moz-calc((100% - 32px) / 5);	/* firefox 15- */
-	width: -webkit-calc((100% - 32px) / 5);	/* chrome 25-, safari 6 */
-	width: calc((100% - 32px) / 5);	
+	display: block;						/* display as block */
+    padding: 7px 2%;					/* must be 7px for line height is 30px */
+	font-weight: normal;				/* remove bold as default */
 }
 
 .tab-content {
 	float: left;
-	width: 80%;								/* IE 8 */
-	width: -moz-calc(100% - 20px);			/* firefox 15- */
-	width: -webkit-calc(100% - 20px);		/* chrome 25-, safari 6 */
-	width: calc(100% - 20px);				/* streth full width when one children */
+	width: 80%;							/* IE 8-, Opera 12- */
+	width: -moz-calc(100% - 20px);		/* firefox 15- */
+	width: -webkit-calc(100% - 20px);	/* chrome 25-, safari 6 */
+	width: calc(100% - 20px);			/* streth full width when one children */
 }
 
 
 }
 
 
-/* ------------------------------------ 640px ------------------------------------	*/
+
+/* ==================================================================
+								640px
+ * ================================================================== */
 
 @media screen and (max-width: 640px) {
 
-/*	---------------------------
-		#topmenu - > #menu
-	---------------------------	*/
+
+
+/* ------------------------------------------------------------------
+	#topmenu - > #menu
+ * ------------------------------------------------------------------ */
 
 #menu {
-	border-radius: 0;						/* remove default radius */
-	padding: 0px;							/* remove default padding */
+	border-radius: 0;					/* remove default radius */
+	padding: 0px;						/* remove default padding */
 	box-shadow: none;
 	height: 45px;
 }
@@ -278,9 +308,9 @@ input.large-field, select.large-field {
 	right: 15px;
 }
 
-/*	-----------------------
+/* ------------------------------------------------------------------
 		#cart
-	----------------------- */
+ * ------------------------------------------------------------------ */
 #header #cart {
     height: 60px;
     margin: 0 auto;
@@ -292,18 +322,18 @@ input.large-field, select.large-field {
 	/* float: left; */
 }
 
-/*	---------------------------
+/* ------------------------------------------------------------------
 		#slideshow
-	--------------------------- */
+ * ------------------------------------------------------------------ */
 .slideshow .nivoSlider {
 	background-size: contain;
 }
 
 
 	
-/*	---------------------
+/* ------------------------------------------------------------------
 		.box-product
-	--------------------- */
+ * ------------------------------------------------------------------ */
 .box-product {
 	/* overflow: hidden; */
 }
@@ -320,22 +350,23 @@ input.large-field, select.large-field {
 
 
 
-/*	--------------------------------------
- *
- *	 ---			Product List 		--
- *
- *	-------------------------------------- */
+/*	-----------------------------------------------------------------
 
-/*	-------------------
+							Product List 
+
+ *	----------------------------------------------------------------- */
+
+ 
+/*	-----------------------------------------------------------------
 		#column-left
-	------------------- */
+	----------------------------------------------------------------- */
 #column-left {
     clear: both;
     float: none;
     margin: 0 auto;
-	width: 90%;								/* IE 8 */
-	width: -moz-calc(100% - 40px);			/* firefox 15- */
-	width: -webkit-calc(100% - 40px);		/* safari 6, chrome 25- */
+	width: 90%;							/* IE 8 */
+	width: -moz-calc(100% - 40px);		/* firefox 15- */
+	width: -webkit-calc(100% - 40px);	/* safari 6, chrome 25- */
     width: calc(100% - 40px);
 }
 
@@ -350,39 +381,38 @@ input.large-field, select.large-field {
 #content {
     clear: both;
     margin: 20px;
-	width: 80%;								/* IE 8 */
-	width: -moz-calc(100% - 40px);			/* firefox 15- */
-	width: -webkit-calc(100% - 40px);		/* safari 6, chrome 25- */
+	width: 80%;							/* IE 8 */
+	width: -moz-calc(100% - 40px);		/* firefox 15- */
+	width: -webkit-calc(100% - 40px);	/* safari 6, chrome 25- */
     width: calc(100% - 40px);
 }
 
 
 #column-left > .banner {
-	display: none;			/* hide banner */
+	display: none;						/* hide banner */
 }
 
-/*	--------------------------------------
- *
- *	 ---		Product Details 		--
- *
- *	-------------------------------------- */
+/* -----------------------------------------------------------------
+ 
+							Product Details 
+
+ * ----------------------------------------------------------------- */
  
  #column-right {
     clear: both;
     float: none;
     margin: 0 auto;
-	width: 90%; 							/* no support calc(), IE8- */
-	width: -moz-calc(100% - 40px);			/* firefox 15- */	
-	width: -webkit-calc(100% - 40px); 		/* chrome 25-, safari 6 */
+	width: 90%; 						/* no support calc(), IE8- */
+	width: -moz-calc(100% - 40px);		/* firefox 15- */	
+	width: -webkit-calc(100% - 40px); 	/* chrome 25-, safari 6 */
     width: calc(100% - 40px);
 }
 
 
 
-/*	-------------------------------
+/* -----------------------------------------------------------------
 		#content -> OrderInformation
-		
-	-------------------------------	*/
+ * ----------------------------------------------------------------- */
 #content .content .left {
 	float: none;
 	width: 100%;
@@ -392,9 +422,12 @@ input.large-field, select.large-field {
 	width: 100%;
 }
 
+
 input.large-field, select.large-field {
     width: 98%;
 }
+
+
 
 #return-product .return-name,
 #return-product .return-model,
@@ -404,20 +437,56 @@ input.large-field, select.large-field {
 #return-product .return-captcha{
 	float: none;
 	width: 95%;
-	margin-right: 0;				/* remove default margin-right: 15px */
-}
-
-#return-product input[type="text"], 
-#return-product input[type="password"], 
-#return-product textarea {
-	width: 98%;
-}
-
+	margin-right: 0;					/* remove default margin-right: 15px */
 }
 
 
+/* ------------------------------------------------------------------
+	#tabs 
+	- to be vertical tabs when width < 640px
+	- add #tab-container in product.tpl to wrap .tab-content 
+ * ------------------------------------------------------------------ */
 
-/*	-------------------------------------- 480px ----------------------------------------- */
+#tabs.htabs { 
+	height: auto;
+	border: 1px solid #DDDDDD;
+}
+
+#tabs.htabs a {
+	display: block;
+    border: medium none;
+    color: #FFFFFF;
+    display: block;						/* display as block */
+    width: 100%;
+	background: none repeat scroll 0 0 #525252;
+}
+
+#tabs.htabs a.selected {
+    background: none repeat scroll 0 0 #FFFFFF;
+	color: #525252;
+}
+
+#tab-container {
+	border: 1px solid #DDDDDD;
+	border-top: none;					/* remove top border */
+    overflow: hidden;					/* content a little bit bigger */
+	margin-bottom: 5px;					/* 5px space from .tags */
+}
+
+.tab-content {
+	border: medium none;				/* remove default border */
+}
+
+
+
+}
+
+
+/* ==================================================================
+
+								480px
+
+ * ================================================================== */
 
 @media screen and (max-width: 480px) {
 
@@ -461,6 +530,15 @@ input.large-field, select.large-field {
     clear: both;
 }
 
+/* ------------------------------------------------------------------
+		.buttons .right 
+		- Purchase Gift Btn: Continue
+ * ------------------------------------------------------------------ */
+#content .buttons .right {
+    text-align: center;					/* center input button and text */
+}
+
+
 #footer .column {
 	float: none;
 	margin: auto;
@@ -468,9 +546,22 @@ input.large-field, select.large-field {
 }
 
 
+
+
 }
 
+
+/* ==================================================================
+
+								320px
+
+ * ================================================================== */
+
 @media screen and (max-width: 320px) {
+
+body {
+	min-width: 300px;					/* IE 6- not support */
+}
 
 
 }
