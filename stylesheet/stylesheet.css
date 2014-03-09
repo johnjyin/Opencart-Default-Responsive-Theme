@@ -20,6 +20,11 @@
 --		-		-			-		+ .box-product .image hold 1px border
 --		-		-			-		+ body overflow hidden scroll bar when width 964px ~ 980px
 --		-		-			-		center header text when width < 640px
+--		-		09/03/2014	0.7		related products: 20% thumbnail	= 150px, as well updating
+--		-		-			-		system >> settings >> imgage >> related products
+--		-		-			-		150px width of Specials/Latest/Features images at
+--		-		-			-		extension >> modules >> Specials/Latest/Features
+--		-		-			-		+ google font: 'Droid Sans'
 --------------------------------------------------------------- */
 /*	-------------------------
 		global
@@ -27,6 +32,7 @@
 
 body {
 	overflow: hidden;						/* content width=960px~980px, scroll-bar coming out*/
+	font-family: 'Droid Sans', arial, Helvetica, sans-serif;
 }
 
 h1, .welcome {
@@ -39,7 +45,42 @@ h1, .welcome {
 	text-shadow: 0 0 1px rgba(0, 0, 0, .01);
 }
 
+a.button,
+input.button {
+	background: url("../image/grad.png") repeat-x scroll left top #F8F8F8;
+	border-radius: 3px;
+    color: #444444;
+    cursor: pointer;
+    font-size: 12px;
+    font-weight: normal;
+    line-height: 12px;
+    text-shadow: 0 1px 0 #FFFFFF;
+	box-shadow: none;					/* remove default box shadow */
+}
 
+a.button:hover,
+input.button:hover {
+	background-color: #00D0DD;
+	color: #FFF;
+	text-shadow: none;
+	background-position: 0;
+}
+
+
+
+.box .box-heading {
+	font-size: 16px;
+	font-family: 'Pontano Sans',arial,sans-serif;
+	border: none;
+	border-bottom: 1px solid #DDD;
+	background: none;				/* remove default background */
+	line-height: 120%;
+	text-transform: uppercase;
+}
+
+.box .box-content {
+	border: none;
+}
 
 /*	------------------------------
 		layout 
@@ -264,6 +305,7 @@ h1, .welcome {
 #menu {
 	box-shadow: 0 2px 0 #DDDDDD;
 	height: 40px;s
+	border-radius: 2px;
 }
 
 #mainmenu-toggle {
@@ -324,8 +366,8 @@ h1, .welcome {
 .box-product > div {
 	display: inline-block;
 	vertical-align: top;
-	width: 19%;
-	padding: 0.4%;
+	width: 20%;
+	/*padding: 0.4%; */					/* so enough space for each thumbnail */
 	float: left;
 	text-align: center; 				/* center text */
 	white-space: nowrap;				/* no wrap text */
@@ -359,13 +401,25 @@ h1, .welcome {
 }
 
 
+.box-product .name a {
+    color: #4B4B4B;						/* new color for name */
+    font-weight: normal;				/* remove default heavy font */
+}
+
+.product_holder .price {
+    font-family: 'Pontano Sans','Droid Sans', arial, sans-serif;
+    font-size: 14px;
+    font-weight: bold;
+    line-height: 23px;
+}
+
 
 /*	----------------------------
 		#footer
 	----------------------------	*/ 
 
 #footer {
-    background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAIAAACRXR/mAAADtUlEQVRYhX2YMXYjMQxDuXoqdDnf/yoqU4yXhvChcZHYMkUCIMh5yb/P57PW2ntXVVWttapq7/0c9sf6/9ITjeEtPbx9q2GacDSmvtz3I6AuoGSeWxrfJwZRf8ZbT9pB3gT6gDBkeh7LG26l1wGmX381jLdh11BrdGTc6NlHJWZOMFZrrUFhtLapqGUMhBVuuPoy/jHy28Tnl3XXsqgk1JWO6evKJCKLhb5qmYBW9d1w6gGb3Nh0Jd8gWHdSUjaetOKQE8pNWhbS/GutSXnqlHqf+yYC4jLTJXLjwLv981gQEdxtP/GNXlftaTvetYk51LJdYArd+qvo2ReVnHdj8NfyFCyOOl1PTN0+qkhF6zJPVTVMeTWETopmIUpFZsuMSkQyddprKsabq7gGiZgjElNZuVvrp6mlFzRpnc6zyBhmjuQVUuqwWTDdzZ6mXKxN85EG4y3P3nuU9JstMBJkpmOvh4VnpSKwntIt01pjJrWORHDUOI6qQom+1EKTE0E21DkiUBr6Mbrt1vfn42DjGMcpixNq46l60FvKimSGZlErMKN1xPJ2hli+4AdDY7oc61R5x6ao8uwgDadJzGoGVxmutaaluC2wqFadBtCSBGQqGiVLNSlJR1g3406yGJZk7zgE1oFfE03nl0VgEnJp3fxXaLeem8z+qGZ5HcZmSQIFR5oe1j6y0veTvtvnXuH0lljEzhlmMZE/49/UUs30o02NJW3EEbQKqSYzaY9nYrThTYY6TW0dZB7lT4EtyWBEpMsChoAdt2nl8tQSNuaT0cxoSUnATuzuPh8Gdcps8/icj1vSeGLZ3z8SsdHQthi+YeaNXONAmDMMmU50wdFazvI8rxn1KKxB2x0a8DLztmuiN0za58QXhGqj780HpPvSIyK2EuzYMLxWj3pobRPDCscB1Py0ch/+9ta+PLxuFukXicWqHNtGueUp93w1VSEbnJeptjKcwS582z5xR/z2loJY54J+sUUEEUWKYTZ9Wv2wvLpvnZvacFDCqLFJZaLGBalumZXsqbWZwvLG7igTraeF9NBmaK6zr6QYa0fX0+PRl0RGt/zWaRS/zt6r4FYmgohia4xe73JL/yBjRiW95fWiE69zSE0e0+X5dm7sjLgy4mzSRrePUTNFZhYarB15sy+a62aAWFI52xT3++Mf4ObBmzZWxqYpWs3gGmfbugcsaqsZTbZoQXuvcBUZ5458jn9Sao9o1YJFXiKtTeTGWodaNz+pTrb34iaMZagxt0+d9nje/wEv3lsq2TCkyQAAAABJRU5ErkJggg==");
+    background: #4B4B4B;
 	padding: 0px; 					/* remove original padding=20px */
 }
 

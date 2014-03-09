@@ -23,6 +23,8 @@
 <![if (!IE)|(gte IE 9)]>
 <link rel="stylesheet" type="text/css" href="catalog/view/theme/defaultresponsive/stylesheet/responsive.css" />
 <![endif]>
+<link href="//fonts.googleapis.com/css?family=Droid+Sans:400,700" rel="stylesheet" type="text/css">
+<link href="//fonts.googleapis.com/css?family=Pontano+Sans:400" rel="stylesheet" type="text/css">
 <?php foreach ($styles as $style) { ?>
 <link rel="<?php echo $style['rel']; ?>" type="text/css" href="<?php echo $style['href']; ?>" media="<?php echo $style['media']; ?>" />
 <?php } ?>
