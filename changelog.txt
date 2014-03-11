@@ -11,8 +11,12 @@ v0.6 05/03/2014	by John Yin
 -	-	-			vertical #tabs when < 640px
 
 v0.5 25/02/2014 by John Yin
--	-	*.tpl: 			remove all version logs from tpl files, for these would cause many issues, particularly for IE 9-, for IE knows comments tags: <!-- -->
--	-	header.tpl: 		use downlevel-revealed conditional comments in header.tpl, so as only loading responsive.css when !IE or IE 9 +
--	-	return_form.tpl:	add this module and remove $(colorbox).colorbox snippet for running js error: $(...).colorbox is not a function
+-	-	*.tpl: 			remove all version logs from tpl files, for these would 
+-	-	-			cause many issues, particularly for IE 9-, for IE knows 
+-	-	-			comments tags: <!-- -->
+-	-	header.tpl: 		use downlevel-revealed conditional comments in header.tpl, 
+-	-	-			so as only loading responsive.css when !IE or IE 9 +
+-	-	return_form.tpl:	add this module and remove $(colorbox).colorbox snippet for 
+-	-	-			running js error: $(...).colorbox is not a function
 
-	**	v0.5 support IE 9 (being tested by IE TESTER), except user account module.
+**	v0.5 support IE 9 (being tested by IE TESTER), except user account module.
