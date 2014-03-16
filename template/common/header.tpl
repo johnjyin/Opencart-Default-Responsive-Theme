@@ -20,6 +20,8 @@
 <link rel="stylesheet" type="text/css" href="catalog/view/theme/defaultresponsive/stylesheet/normalize.css" />
 <link rel="stylesheet" type="text/css" href="catalog/view/theme/default/stylesheet/stylesheet.css" />
 <link rel="stylesheet" type="text/css" href="catalog/view/theme/defaultresponsive/stylesheet/stylesheet.css" />
+<link rel="stylesheet" type="text/css" href="catalog/view/theme/defaultresponsive/stylesheet/font-awesome.css" />
+<link href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
 <![if (!IE)|(gte IE 9)]>
 <link rel="stylesheet" type="text/css" href="catalog/view/theme/defaultresponsive/stylesheet/responsive.css" />
 <![endif]>
@@ -30,6 +32,7 @@
 <?php } ?>
 <script type="text/javascript" src="catalog/view/javascript/jquery/jquery-1.7.1.min.js"></script>
 <script type="text/javascript" src="catalog/view/javascript/jquery/ui/jquery-ui-1.8.16.custom.min.js"></script>
+<script src="catalog/view/theme/defaultresponsive/js/jquery.elevatezoom.js"></script>
 <!--[if lt IE 9]>
 <script src="catalog/view/theme/defaultresponsive/js/css3-mediaqueries.js"></script>
 <script src="catalog/view/theme/defaultresponsive/js/html5shiv.js"></script>

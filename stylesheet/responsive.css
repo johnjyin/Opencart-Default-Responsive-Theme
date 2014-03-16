@@ -1,35 +1,15 @@
-/* ------------------------------------------------------------------
---  Copyright             :  2014
---  Author                :  JOHN J YIN
---	Email				  :	 john.yin@ebizdesigner.com
---  Version               :  0.2
---  Date                  :  18/02/2014
---  Description           :  one extension of Opencart Default theme
---                           to support mobile, tablet
---
---  History               :
---      <author>   <time>      <version >       <desc>
---      JOHN	16/02/2014	0.1		initial
---		- 		18/02/2014	0.2		test all common browsers 
---		-		19/02/2014	-		+ #column-left style
---		-		23/02/2014	0.4		fix table-cell not working by float
---		-		-			-		update #footer, #topbar style
---		-		-			-		+ #content 	left/right margin
---		-		-			-		set input width=n% width>640px or <640px
---		-		-			-		center header text when width < 640px
---		-		-			-		move tabs style into max-width 980px
---		-		04/03/2014	0.6		body mini-width: 300px
---		-		-			-		responsive inputs when < 980px
---		-		-			-		vertical #tabs when < 640px
--------------------------------------------------------------------- */
-
 /* =================================================================
 
-							980px
+							1040px
+	container (980px) 
+	+ left/right padding (40px) 
+	+ right sroll bar (20px)
+	-----------------------------
+	=	1040px
 
  * ================================================================= */
 
-@media screen and (max-width: 980px) {
+@media screen and (max-width: 1040px) {
 
 
 /* ------------------------------------------------------------------
@@ -42,7 +22,10 @@
 }
 
 #container {
+	margin: 0px;						/* remove 20px top/bottom margin */
+	padding: 0px;						/* remove 20px padding */
 	width: 100%;
+	border-radius: 0px;
 }
 
 #topbar #welcome {
@@ -50,10 +33,23 @@
 }
 
 
+/* ------------------------------------
+	.box-product
+	
+	- Related Products
+	
+ * ------------------------------------ */
+
 .box-product > div {
-	width: 31%;
+	width: 23%;
 	padding: 1%;
 }
+
+#tab-related .box-product .image img {
+    width: 100%;
+}
+
+
 
 .jcarousel-skin-opencart {
 	display: none;
@@ -206,15 +202,23 @@ input.large-field, select.large-field {
 }
 
 
+#footer {
+	margin: 0 20px;
+}
+
+#powered {
+	margin: 0 20px;
+}
+
 }
 
 
 
 /* ==================================================================
-								640px
+								700px
  * ================================================================== */
 
-@media screen and (max-width: 640px) {
+@media screen and (max-width: 700px) {
 
 
 
@@ -332,7 +336,11 @@ input.large-field, select.large-field {
 
 	
 /* ------------------------------------------------------------------
-		.box-product
+	.box-product
+		
+	- 
+	- #tab-related  (Product Related)
+	
  * ------------------------------------------------------------------ */
 .box-product {
 	/* overflow: hidden; */
@@ -343,23 +351,32 @@ input.large-field, select.large-field {
 	padding: 1%;
 }
 
+#tab-related .box-product .image img {
+    width: 150px;
+}
+
+
 #footer .column {
-    width: 95%;
+    width: 45%;
+	height: 130px;
 	text-align: left;
 }
 
 
 
-/*	-----------------------------------------------------------------
+ /* ------------------------------------
+	.product-list
+	- Products List Page
+ * ------------------------------------ */
 
-							Product List 
-
- *	----------------------------------------------------------------- */
-
+.product-list .description {
+    width: 100%;
+	line-height: 20px;
+}
  
-/*	-----------------------------------------------------------------
-		#column-left
-	----------------------------------------------------------------- */
+/* ------------------------------------
+	#column-left
+ * ----------------------------------- */
 #column-left {
     clear: both;
     float: none;
@@ -380,7 +397,7 @@ input.large-field, select.large-field {
 }
 #content {
     clear: both;
-    margin: 20px;
+    /*margin: 20px;*/
 	width: 80%;							/* IE 8 */
 	width: -moz-calc(100% - 40px);		/* firefox 15- */
 	width: -webkit-calc(100% - 40px);	/* safari 6, chrome 25- */
@@ -470,7 +487,6 @@ input.large-field, select.large-field {
 	border: 1px solid #DDDDDD;
 	border-top: none;					/* remove top border */
     overflow: hidden;					/* content a little bit bigger */
-	margin-bottom: 5px;					/* 5px space from .tags */
 }
 
 .tab-content {
@@ -484,11 +500,11 @@ input.large-field, select.large-field {
 
 /* ==================================================================
 
-								480px
+								540px = 480px + 60px
 
  * ================================================================== */
 
-@media screen and (max-width: 480px) {
+@media screen and (max-width: 540px) {
 
 
 
@@ -496,6 +512,8 @@ input.large-field, select.large-field {
 	width: 95%;
 	padding: 1%;
 }
+
+
 
 #header {
     text-align: left;
@@ -519,7 +537,7 @@ input.large-field, select.large-field {
     position: relative;
     text-align: center;
     top: 0;
-    width: auto;
+    width: 100%;
 }
 
 #topbar #welcome a {
@@ -539,12 +557,40 @@ input.large-field, select.large-field {
 }
 
 
-#footer .column {
-	float: none;
-	margin: auto;
-	width: auto;
+
+
+/* ------------------------------------
+	.product-info
+		
+	Products List Page
+		
+ * ------------------------------------ */
+
+ .product-filter .display {
+    margin-right: 0;
+    width: 100%;
 }
 
+
+.product-filter .sort {
+    float: left;
+}
+
+
+.product-list .price {
+    float: left;
+}
+
+.product-list .name {
+    float: left;
+    width: 100%;
+}
+
+
+#footer .column { 
+	width: 95%;
+	height: auto;
+}
 
 
 
@@ -553,7 +599,7 @@ input.large-field, select.large-field {
 
 /* ==================================================================
 
-								320px
+								380px
 
  * ================================================================== */
 

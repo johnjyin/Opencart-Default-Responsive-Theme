@@ -1,0 +1,50 @@
+/* ------------------------------------------------------------------
+--  Copyright             :  2014
+--  Author                :  JOHN J YIN
+--	Email				  :	 john.yin@ebizdesigner.com
+--  Version               :  0.1
+--  Date                  :  15/03/2014
+--  Description           :  responsive styles for Sapphirewood.com.au
+--                         
+--                           based on the Opencart Default Responsive theme
+--                           
+--
+--  History               :  
+--     <author>   <time>      <version >       <desc>
+--		John	15/03/2014		0.1				initial
+--
+--------------------------------------------------------------------- */
+
+/* =================================================================
+
+							1040px = 980px + 60px
+
+ * ================================================================= */
+
+ 
+@media screen and (max-width: 980px) {
+
+.shop-contact .grid-4 {
+    width: 45%;
+	height: 130px;
+}
+
+
+}
+
+
+/* =================================================================
+
+							540px = 480px + 60px
+
+ * ================================================================= */
+ 
+@media screen and (max-width: 540px) {
+
+
+.shop-contact .grid-4 { 
+	width: 95%;
+	height: auto;
+}
+
+}

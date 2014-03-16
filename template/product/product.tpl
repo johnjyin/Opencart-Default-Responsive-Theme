@@ -10,7 +10,7 @@
     <?php if ($thumb || $images) { ?>
     <div class="left">
       <?php if ($thumb) { ?>
-      <div class="image"><a href="<?php echo $popup; ?>" title="<?php echo $heading_title; ?>" class="colorbox"><img src="<?php echo $thumb; ?>" title="<?php echo $heading_title; ?>" alt="<?php echo $heading_title; ?>" id="image" /></a></div>
+      <div class="image"><a href="<?php echo $popup; ?>" title="<?php echo $heading_title; ?>" class="colorbox"><img src="<?php echo $thumb; ?>" title="<?php echo $heading_title; ?>" alt="<?php echo $heading_title; ?>" id="image" data-zoom-image="<?php echo $popup; ?>"/></a></div>
       <?php } ?>
       <?php if ($images) { ?>
       <div class="image-additional">
@@ -353,11 +353,25 @@
   <?php echo $content_bottom; ?></div>
 <script type="text/javascript"><!--
 $(document).ready(function() {
-	$('.colorbox').colorbox({
-		overlayClose: true,
-		opacity: 0.5,
-		rel: "colorbox"
-	});
+	var res, new_width;
+	new_width 	=	window.innerWidth || $(window).width();
+	
+	$(window).resize( function () {
+		if (res){clearTimeout(res)};
+		res = setTimeout( function(){
+				new_width = (window.innerWidth || $(window).width()) - 20;
+			}, 500 );
+		console.log(res);
+		console.log(new_width);
+		$('.colorbox').colorbox({
+			overlayClose: true,
+			opacity: 0.5,
+			rel: "colorbox",
+			scalePhotos: true,
+			width: new_width
+		});
+	}).trigger('resize');
+	
 });
 //--></script> 
 <script type="text/javascript"><!--
@@ -514,4 +528,12 @@ $(document).ready(function() {
 	$('.time').timepicker({timeFormat: 'h:m'});
 });
 //--></script> 
+<script type="text/javascript"><!--
+$("#image").elevateZoom({
+	zoomType	: "lens",
+	lensShape	: "round",
+	lensSize	: 70
+});
+//--></script> 
+
 <?php echo $footer; ?>

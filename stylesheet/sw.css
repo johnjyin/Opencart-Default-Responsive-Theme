@@ -1,0 +1,229 @@
+/* ------------------------------------------------------------------
+--  Copyright             :  2014
+--  Author                :  JOHN J YIN
+--	Email				  :	 john.yin@ebizdesigner.com
+--  Version               :  0.1
+--  Date                  :  14/03/2014
+--  Description           :  styles for Sapphirewood.com.au
+--                         
+--                           based on the Opencart Default Responsive theme
+--                           
+--
+--  History               :  
+--     <author>   <time>      <version >       <desc>
+--		John	14/03/2014		0.1				initial
+--
+--------------------------------------------------------------------- */
+
+/* ------------------------------------
+	#box-product
+ * ------------------------------------ */
+
+.box-product > div {
+	width: 20%;
+	
+}
+
+.box-product .image img {
+    width: 150px;
+}
+
+/* ------------------------------------
+	.shop-contact
+ * ------------------------------------ */
+ 
+#content {
+	margin-bottom: 0px;					/* .shop-contact in #content, remove bottom margin */
+	padding: 0px;						/* remove default 10px padding */
+	
+}
+	
+.shop-contact  {
+	margin-bottom: 0px;					/* remove default .box bottom margin */					
+}
+
+.shop-contact p {
+	line-height: 20px;					/* to same height with <li> */
+	margin-bottom: 0px;						/* remove default 20px margin-bottom */
+}
+
+.shop-contact p a {
+	text-decoration: none;
+	color: #DDD;
+	vertical-align: -2px;
+}
+
+.shop-contact p a:hover {
+	color: #00D0DD;
+}
+
+.shop-contact h3 {
+	margin: 0px auto 8px;				/* same with #footer h3 */
+	font-weight: normal;				/* replace default blod h3 */
+    letter-spacing: 0.3px;				
+}
+
+.shop-contact  .box-content{
+	background-color: #666;				/* remove default .box .box-content border radius */
+	border-radius: 0px;					/* remove default .box .box-content border radius */
+	color: #BBB;
+	padding: 0px;						/* remove default .box .box-content 10px padding */
+	font-size: 11px;
+}
+
+.shop-contact .grid-4 {
+    float: left;
+    margin: 10px;
+    width: 21%;
+}
+
+.shop-contact ul {
+	padding: 0px;
+	margin: 0px;
+}
+
+.shop-contact ul li {
+	list-style: none outside none;
+}
+
+
+#footer {
+	border-top: none;					/* reomve default top border */
+}
+
+
+/* ------------------------------------
+	Awesome icon
+ * ------------------------------------ */
+
+.shop-contact .awesome_icon span,
+.shop-contact .awesome_icon a {
+    position: relative;
+	line-height: 19px;
+	display: inline-block;
+	text-decoration: none;
+}
+
+.shop-contact .awesome_icon span:before,
+.shop-contact .awesome_icon a:before {
+    font-family: FontAwesome;
+	vertical-align: middle;
+    padding-right: 5px;
+}
+
+.shop-contact .awesome_icon_blank span:before {
+	visibility: hidden;
+    font-size: 14px;
+    padding-right: 5px;
+}
+
+.contact-phone span:before {
+	content: "\f095";
+}
+
+.contact-fax span:before {
+	content: "\f02f";
+}
+
+.contact-email span:before {
+	content: "\f003";
+}
+
+.contact-address span:before {
+	content: "\f07a";
+}
+
+.contact-openhours span:before {
+	content: "\f017";
+}
+
+.contact-blog a:before {
+	content: "\f017";
+}
+
+.contact-facebook a:before {
+	content: "\f09a";
+}
+
+.contact-twitter a:before {
+	content: "\f099";
+}
+
+
+/* ------------------------------------
+    .jcarousel
+	
+	
+ * ------------------------------------ */
+
+.jcarousel-skin-opencart {
+
+}
+
+.jcarousel-skin-opencart .jcarousel-container {
+    margin-bottom: 0px!important;
+}
+
+.jcarousel-skin-opencart .jcarousel-container-horizontal {
+    padding: 0px!important;						/* so as button on picture */
+}
+
+.jcarousel-skin-opencart .jcarousel-prev-disabled-horizontal,
+.jcarousel-skin-opencart .jcarousel-next-disabled-horizontal {
+    background-position: 0 0;
+}
+
+.jcarousel-skin-opencart .jcarousel-prev-horizontal,
+.jcarousel-skin-opencart .jcarousel-next-horizontal {
+    top: 50%!important;
+	margin: auto 20px;
+	opacity: 0.6;
+}
+
+.jcarousel-skin-opencart .jcarousel-prev-horizontal:hover,
+.jcarousel-skin-opencart .jcarousel-next-horizontal:hover {
+	opacity: 1;
+	
+}
+
+.jcarousel-skin-opencart .jcarousel-prev-horizontal {
+	background: url("../image/arrow-prev.png") no-repeat!important;
+}
+
+.jcarousel-skin-opencart .jcarousel-prev-horizontal:hover {
+	background: url("../image/arrow-prev-blue.png") no-repeat!important;
+}
+
+.jcarousel-skin-opencart .jcarousel-next-horizontal {
+	background: url("../image/arrow-next.png") no-repeat!important;
+}
+
+.jcarousel-skin-opencart .jcarousel-next-horizontal:hover {
+	background: url("../image/arrow-next-blue.png") no-repeat!important;
+}
+
+
+/* ------------------------------------
+   .social-media
+ * ------------------------------------ */
+
+.social-media .button{
+	color: #777777;
+    margin: 5px;
+    opacity: 0.7;
+    padding: 5px;
+}
+
+.social-media .sm-twitter,
+.social-media .sm-facebook,
+.social-media .sm-google
+ {
+	opacity: 0.5;
+}
+
+.social-media .sm-twitter:hover,
+.social-media .sm-facebook:hover,
+.social-media .sm-google:hover
+ {
+	opacity: 1;
+}

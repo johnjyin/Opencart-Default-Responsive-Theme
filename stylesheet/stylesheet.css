@@ -1,31 +1,3 @@
-/* ---------------------------------------------------------------
---  Copyright             :  2014
---  Author                :  JOHN J YIN
---	Email				  :	 john.yin@ebizdesigner.com
---  Version               :  0.2
---  Date                  :  18/02/2014
---  Description           :  one extension of Opencart Default theme
---                           to support mobile, tablet
---                         
---                           based on Opencart(v1.5.6) stylesheet.css 
---                           most changes would be marked
---
---  History               :
---      <author>   <time>      <version >       <desc>
---      JOHN	16/02/2014	0.1		initial
---		 - 		18/02/2014	0.2		test all common browsers 
---		-		20/02/2014	0.3		update search input style & method
---		-		24/02/2014	0.4		update #topbar style
---		-		-			-		update #footer style
---		-		-			-		+ .box-product .image hold 1px border
---		-		-			-		+ body overflow hidden scroll bar when width 964px ~ 980px
---		-		-			-		center header text when width < 640px
---		-		09/03/2014	0.7		related products: 20% thumbnail	= 150px, as well updating
---		-		-			-		system >> settings >> imgage >> related products
---		-		-			-		150px width of Specials/Latest/Features images at
---		-		-			-		extension >> modules >> Specials/Latest/Features
---		-		-			-		+ google font: 'Droid Sans'
---------------------------------------------------------------- */
 /*	-------------------------
 		global
 	-------------------------	*/
@@ -33,6 +5,25 @@
 body {
 	overflow: hidden;						/* content width=960px~980px, scroll-bar coming out*/
 	font-family: 'Droid Sans', arial, Helvetica, sans-serif;
+	background: url('../image/grid.png');	/* grid background */
+	line-height: 16px;
+}
+
+h1, h2, h3, h4, b {
+	font-weight: normal;
+}
+
+a, a:visited, a b {
+    color: #555;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+a:hover,
+a b:hover {
+    color: #382eee!important;			/* unified hover effect on link */
+	transition: all 0.5s ease 0s;		/* transition effect */
+	text-decoration: none;
 }
 
 h1, .welcome {
@@ -66,30 +57,31 @@ input.button:hover {
 	background-position: 0;
 }
 
-
+.box {
+	margin: 0px;
+}
 
 .box .box-heading {
-	font-size: 16px;
+	font-size: 14px;
 	font-family: 'Pontano Sans',arial,sans-serif;
 	border: none;
 	border-bottom: 1px solid #DDD;
 	background: none;				/* remove default background */
 	line-height: 120%;
 	text-transform: uppercase;
+	padding: 2px;					/* replace default 7px - 10px padding */
+	color: #AAA;					/* replace default #000 color */
+	letter-spacing: 0.8px;
 }
 
 .box .box-content {
 	border: none;
 }
 
-/*	------------------------------
-		layout 
-	------------------------------ */
-
 	
-/*	------------------------------ 
-		clearning 
-	------------------------------ */
+/* ------------------------------------
+	Clearning 
+ * ------------------------------------ */
 .clearbreak {
 	clear: both;
 }
@@ -102,18 +94,24 @@ input.button:hover {
 }
 
 
-/*	-------------------------------
-		#container
-	-------------------------------	 */
+/* ------------------------------------
+	#container
+ * ------------------------------------ */
+
 #container {
+    background: none repeat scroll 0 0 #FFFFFF;
+    border-radius: 6px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.15);
+    margin: 20px auto;
+    padding: 10px 20px 20px;
+    text-align: left;
 	width: 980px;
-	margin: 0 auto;
 }
 
 
-/*	------------------------------- 
-		#header 
-	-------------------------------- */
+/* ------------------------------------
+	#header 
+ * ------------------------------------ */
 
 #header {
     height: auto;					/* !!important to not overlap with slideshow */
@@ -130,9 +128,9 @@ input.button:hover {
 }
 
 
-/*	--------------------------------
-		#header -> #topbar
-	--------------------------------	*/
+/* ------------------------------------
+	#header -> #topbar
+ * ------------------------------------ */
 
 #topbar .wrapper {
     padding: 1px 0;
@@ -140,7 +138,7 @@ input.button:hover {
 }
 
 #header #topbar {
-    font-size: 12px;
+    /*font-size: 12px;	*/					/* no function, for pre-defined lower-lever font-size */
     padding: 1px 0;
     position: relative;
 }
@@ -148,18 +146,19 @@ input.button:hover {
 #topbar #currency {
     left: 0;
     position: relative;
-    top: 0;
+    top: 4px;								/* same line with .links */
     width: auto;
 }
 
 #currency a {
-    border: medium none;
+    border: medium none;					/* remove default border */
+	font-size: 11px;						/* unified sizes in #topbar */
+	
 }
 #currency a b {
     color: #999;
+	font-weight: normal;					/* remove default bold font */
 }
-
-
 
 #topbar form {
     float: left;
@@ -167,21 +166,27 @@ input.button:hover {
 
 #header #welcome {
 	float: right;
-    float: right;
     position: relative;
-    top: 4px;
+	margin: 5px auto;					/* same line with .links */
+    top: 0px;							/* same line with .links */
 }
 
 #header #welcome a {
-	color: #999999;
+	color: #555555;						/* cover default blue color */
+	text-decoration: none;				/* remove underline */
+	transition: all 0.5s ease 0s;		/* transition effect */
+}
+
+#header #welcome a:hover {
+	color: #382eee;						/* hover effect on link */
 }
 
 #header .links {
-    margin: 4px 0;
-    position: relative;
 	position: relative;
+	width: 400px;
+    margin: 5px 0;						/* same line with #welcome */
+	top: 0px;							/* same line with #welcome */
 }
-
 
 #header .links a {
     color: #999;
@@ -190,6 +195,12 @@ input.button:hover {
     line-height: 20px;
     padding-left: 20px;
     text-decoration: none;
+	font-size: 11px;					/* unified font in #topbar */
+	transition: all 0.5s ease 0s;		/* transition effect */
+}
+
+#header .links a:hover {
+	color: #382eee;						/* hover effect on link */
 }
 
 #header .links a + a {
@@ -201,9 +212,9 @@ input.button:hover {
 	float: left;
 }
 
-/*	--------------------------
-		#header -> #toppanel
-	------------------------- */
+/* ------------------------------------
+	#header -> #toppanel
+ * ------------------------------------ */
 #header #logo {
 	position: relative;
     float: left;
@@ -213,9 +224,9 @@ input.button:hover {
 	
 }
 
-/* ------------------------
+/* ------------------------------------
 	#header  ->  #cart
- * ------------------------- */
+ * ------------------------------------ */
 
 #header #cart {
     float: right;
@@ -238,10 +249,32 @@ input.button:hover {
 	background-color: #fff;		/* hide search or menu */
 }
 
-#header #cart .heading {
+#header #cart .heading,
+#header #cart.active .heading {
 	background: none;
 	border: none;
 	margin: 0;
+	padding: 0 5px;
+}
+
+#header #cart .heading h4 {
+	font-weight: normal;
+}
+
+#header #cart .heading h4:before {
+    font-family: FontAwesome;
+    padding-right: 5px;
+	content:"\f07a";
+	color: #585858;
+}
+
+
+#header #cart .heading a {
+    color: #555555;						/* replace default blue color */
+}
+
+#header #cart .heading a:hover {
+    color: #382eee;						/* replace default blue color */
 }
 
 #header #cart .content {
@@ -263,9 +296,9 @@ input.button:hover {
 	border: 1px solid #ddd;
 }
 
-/* -------------------------
+/* ------------------------------------
 	#header  ->  #search
-   ------------------------- */
+ * ------------------------------------ */
 
 #header #search {
     float: right;
@@ -297,19 +330,18 @@ input.button:hover {
 }
 
 
-
-/*	---------------------------
+/* ------------------------------------
 		#topmenu - > #menu
-	---------------------------	*/
+ * ------------------------------------ */
 
 #menu {
 	box-shadow: 0 2px 0 #DDDDDD;
-	height: 40px;s
-	border-radius: 2px;
+	/* height: 40px; */
+	border-radius: 2px;					/* replace default 5px radius */
 }
 
 #mainmenu-toggle {
-	display: none;	/* hide toggle button as default */
+	display: none;						/* hide toggle button as default */
 }	
 
 .menuclear:after {
@@ -321,9 +353,9 @@ input.button:hover {
 }
 
 
-/*	---------------------------
-		#content 
-	---------------------------	*/
+/* ------------------------------------
+	#content 
+ * ------------------------------------ */
 
 #content-wrapper {
 	float: left;
@@ -347,9 +379,9 @@ input.button:hover {
 	width: 49%;
 }
 
-/*	------------------------------
-		#content -> .slideshow
-	-----------------------------	*/
+/* ------------------------------------
+	#content -> .slideshow
+ * ------------------------------------ */
 	
 #content .slideshow {
 	width: 100%;
@@ -358,25 +390,22 @@ input.button:hover {
 }
 
 
-/*	-----------------------------
-		#box-product
-	----------------------------- */
-
+/* ------------------------------------
+	#box-product
+ * ------------------------------------ */
 
 .box-product > div {
-	display: inline-block;
-	vertical-align: top;
-	width: 20%;
-	/*padding: 0.4%; */					/* so enough space for each thumbnail */
 	float: left;
 	text-align: center; 				/* center text */
 	white-space: nowrap;				/* no wrap text */
 	margin-right: 0px;					/* remove default right margin */
+	margin-bottom: 0px;					/* remove default 20px bottom margin */
 }
 
 .box-product div div {
 	display: block;
 	overflow: hidden;
+	margin: 5px 0;
 }
 
 .box-product .image {
@@ -389,7 +418,6 @@ input.button:hover {
 
 .box-product .image img {
 	border: none;						/* remove default border */
-	width: 150px;
 	vertical-align: middle;
 	border: none; 						/* remove default border */
 	padding: 0px; 						/* remove default padding */
@@ -403,7 +431,15 @@ input.button:hover {
 
 .box-product .name a {
     color: #4B4B4B;						/* new color for name */
-    font-weight: normal;				/* remove default heavy font */
+    font-weight: normal;				/* remove default heavy style */
+}
+
+.box-product .name a:hover {
+	color: #00D0DD;
+}
+
+.box-product .price {
+	margin-bottom: 10px;				/* replace default 4px */
 }
 
 .product_holder .price {
@@ -414,30 +450,132 @@ input.button:hover {
 }
 
 
-/*	----------------------------
-		#footer
-	----------------------------	*/ 
+/* ------------------------------------
+	.product-info
+		
+	Product Detail Page
+		
+ * ------------------------------------ */
+
+#content h1 {
+    color: #999999;
+    font-size: 20px;
+}
+
+.product-info {
+	line-height: 20px;
+}
+
+ .product-info  b {
+	font-weight: normal;				/* remove blod style */
+}
+ 
+.product-info .description span {
+    color: inherit;						/* replace special blue color */
+}
+
+.product-info .options > h2,
+.product-info .options > br {
+	display: none;						/* hidden Available Options */
+	
+}
+
+
+/* ------------------------------------
+	.product-list
+		
+	- Products List Page
+		
+ * ------------------------------------ */
+
+.product-filter {
+    line-height: 20px;
+}
+
+/* in-active filter choice */
+.product-filter .display a {		
+    color: #AAAAAA;
+    font-weight: normal;
+}
+
+.product-list .description {
+    float: left;
+}
+ 
+ .product-list .name a {
+    color: #888;
+    font-weight: bold;
+}
+
+
+/* ------------------------------------
+   #tab-container
+ * ------------------------------------ */
+
+.htabs a {
+	font-weight: normal;
+}
+
+.tab-content {
+	margin-bottom: 0px;					/* remove default 20px */
+}
+
+#tab-attribute .attribute thead td,
+#tab-attribute .attribute thead tr td:first-child,
+#tab-attribute .attribute tr td:first-child {
+	font-weight: normal;
+}
+
+
+/* ------------------------------------
+    .tags
+	
+ * ------------------------------------ */
+.tags {
+	margin: 5px auto;
+}
+
+ .tags b {
+	font-weight: normal;
+}
+
+
+/* ------------------------------------
+    .sitemap-info
+	
+ * ------------------------------------ */
+ 
+.sitemap-info ul {
+    padding-left: 20px;
+}
+ 
+ 
+/* ------------------------------------
+	#footer
+ * ------------------------------------ */ 
 
 #footer {
-    background: #4B4B4B;
-	padding: 0px; 					/* remove original padding=20px */
+    background: #222;
+	padding: 0px; 							/* remove original padding=20px */
+	border-top: none;						/* reomve default top border */
+	border-bottom: 1px solid #333333;		/* */
+    border-top: 1px solid #333333;			/* */
+	font-size: 11px;
 }
 
-#footer h3 {
-	border-color: #666666;
-	border-bottom: 1px solid #666666;
-	color: #FFF;
-    padding: 10px 0;
-    text-align: left;
-}
 
 #footer .column {
-	color: #DDD;
 	float: left;
 	width: 21%;
-	margin: 1% 10px;
+	margin: 10px;
 	min-height: 100px;
 	text-align: left;
+}
+
+#footer .column h3 {
+	color: #555;
+	font-weight: normal;				/* replace h3 default blod style */
+	letter-spacing: 0.3px;		
 }
 
 #footer .column ul {
@@ -447,16 +585,33 @@ input.button:hover {
 }
 
 #footer .column ul li {
-	padding: 2px 0;
+	padding: 0;							/* remove default padding */
+	margin: 0;							/* remove default margin */
+	line-height: 19px;					/* unified line height with */
 }
 
 #footer .column a {
-    color: #DDDDDD;
+    color: #555;
 }
 
+#footer .column a:hover{
+	color: #CCC;
+	transition: all 0.5s ease 0s;		/* transition effect */
+	text-decoration: none;
+}
+
+/* ------------------------------------
+	#powered
+ * ------------------------------------ */ 
+
 #powered {
-	margin-top: 5px;
+	margin: 0px;						/* remove default 5px top margin */
+	padding: 5px;
 	text-align: center;
 	clear: both;
+	background: #222;					/* same color with #footer */
+    color: #555;
+	font-size: 11px;
 }
+
 
