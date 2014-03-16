@@ -3,7 +3,7 @@ Opencart-Default-Responsive-Theme
 
 We know the official Opencart Default Theme is not responsive.
 
-That's why I name this theme as "Opencart Responsive Default Theme", which means it's based on and let the OpenCart Default Theme to be responsive.
+That's why I name this theme as "Opencart Default Responsive Theme", which means it's based on and let the OpenCart Default Theme to be responsive.
 
 You can visit the live demo by click <a target="_blank"  href="http://demo.ebizdesigner.com/rb/?path=oc14&name=default%20responsive&ie=9&ff=19&sf=5&ch=23&op=12"><strong>here</strong></a>!
 
