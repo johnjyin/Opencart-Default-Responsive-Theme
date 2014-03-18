@@ -1,10 +1,19 @@
-Opencart-Responsive-Default-Theme
+Opencart-Default-Responsive-Theme
 =================================
 
 We know the official Opencart Default Theme is not responsive.
 
-That's why we name this theme as "Opencart Responsive Default Theme", which means it's based on and let the OpenCart Default Theme to be responsive.
+That's why I name this theme as "Opencart Default Responsive Theme", which means it's based on and let the OpenCart Default Theme to be responsive.
 
-Browsers: IE 9+, Firefox 19+, Safari 5+, Chrome 23+, Opera 12+
+You can visit the live demo by click <a target="_blank"  href="http://demo.ebizdesigner.com/rb/?path=oc14&name=default%20responsive&ie=9&ff=19&sf=5&ch=23&op=12"><strong>here</strong></a>!
 
-Note: this theme is hard related with my project on-hand, unless you do the same configuration on backend, you would find it's not completely compatable with Opencart default demo data/configuration. For example, the size of Nivo Slide, and the sizes of products' photos.
+Features:
+<ul>
+<li>Based on original Opencart Default theme.</li>
+<li>Browsers: IE 9+, Firefox 19+, Safari 5+, Chrome 23+, Opera 12+</li>
+<li>Use jquery.elevatezoom.js (v3.0.8) to come true product photo zoom.</li>
+<li>Replace the default colorbox by newest jquery.colorbox.js (v1.5.5).</li>
+</ul>
+
+
+
