@@ -10,6 +10,10 @@ v0.8 16/03/2014	by John Yin
 							      picture zoom. But side effect to small size window.
 -	-	slideshow.tpl		- auto read picture size through file name
 							  to come true auto adjust the size of nivoSlide container
+-	-	jquery.colorbox.js (v1.5.5)
+							- Opencart default use v1.3.19 (of 2006)
+							  begin to use this new version, but still need more test
+							  
 As for SW:
 -	-	in extension: custom-content-module
 							- come true social media and shops contact information
@@ -17,9 +21,7 @@ As for SW:
 -	-	font-awesome		- begin use font-awesome in shops contact information
 -	-	carousel.tpl		- custom carousel prev/next button
 							  and newest jCarousel.js still need more test
--	-	jquery.colorbox.js (v1.5.5)
-							- Opencart default use v1.3.19 (of 2006)
-							  begin to use this new version, but still need more test
+
 
 v0.7 11/03/2014	by John Yin
 -	-	stylesheet.css		related products: 20% thumbnail	= 150px, as well updating
