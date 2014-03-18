@@ -56,6 +56,26 @@ input.button:hover {
 	text-shadow: none;
 	background-position: 0;
 }
+ 
+/* ------------------------------------
+	all table header 
+	- Account >> Transactions
+	- .compare-info (Product Comparision)
+ * ------------------------------------*/
+
+table thead td a,
+thead tr,
+thead td,
+.compare-info tr td:first-child 
+ {
+    color: #999!important;				/* replace default #222 */
+    font-weight: normal!important;			/* remove default bold */
+}
+
+
+
+/* */
+
 
 .box {
 	margin: 0px;

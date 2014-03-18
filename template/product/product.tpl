@@ -354,15 +354,13 @@
 <script type="text/javascript"><!--
 $(document).ready(function() {
 	var res, new_width;
-	new_width 	=	window.innerWidth || $(window).width();
+	new_width 	=	navigator.userAgent.indexOf('AppleWebKit/') > -1 ? $(window).width() : window.innerWidth - 40; 
 	
 	$(window).resize( function () {
 		if (res){clearTimeout(res)};
 		res = setTimeout( function(){
-				new_width = (window.innerWidth || $(window).width()) - 20;
+				new_width = navigator.userAgent.indexOf('AppleWebKit/') > -1 ? $(window).width() : window.innerWidth - 40;
 			}, 500 );
-		console.log(res);
-		console.log(new_width);
 		$('.colorbox').colorbox({
 			overlayClose: true,
 			opacity: 0.5,

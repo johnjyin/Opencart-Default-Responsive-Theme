@@ -2,7 +2,7 @@
 
 							1040px
 	container (980px) 
-	+ left/right padding (40px) 
+	+ left & right padding (20px + 20px) 
 	+ right sroll bar (20px)
 	-----------------------------
 	=	1040px
@@ -12,10 +12,10 @@
 @media screen and (max-width: 1040px) {
 
 
-/* ------------------------------------------------------------------
-		.wrapper 
+/* ------------------------------------
+	.wrapper 
 	- for left and right margin
- * ------------------------------------------------------------------ */
+ * ------------------------------------ */
 .wrapper {   
     margin: 0 20px;
     width: auto;
@@ -87,14 +87,15 @@
 }
 
 
-/* ------------------------------------------------------------------
+/* ------------------------------------
 
-	- 						Product Details 						-
+	- 	Product Details  -
 
- 	when =< 980px, as for two columns, product photo and description
+ 	when =< 980px, as for two columns, 
+	product photo and description
     column, to be changed into one column
 
-	* ----------------------------------------------------------------- */
+	* --------------------------------- */
 
 #content,								/* only #content, like when Category */
 										/* will be covered when #column-left + #content */
@@ -162,13 +163,14 @@ input.large-field, select.large-field {
 
 
 
-/* ------------------------------------------------------------------
+/* ------------------------------------
 	#content -> input
 	
-	- Product Details -> .Options -> textarea; input 
+	- Product Details -> .Options 
+					-> textarea; input 
 	- Purchase a Gift Certificate
 	- Return Product
- * ------------------------------------------------------------------ */
+ * ------------------------------------ */
 
 #content input[type="text"], 
 #content input[type="password"], 
@@ -179,9 +181,9 @@ input.large-field, select.large-field {
 }
 
 
-/* ------------------------------------------------------------------
+/* ------------------------------------
 	#tabs
- * ------------------------------------------------------------------ */
+ * ------------------------------------ */
 
 #tabs.htabs { 
 	overflow: hidden; 
@@ -216,15 +218,18 @@ input.large-field, select.large-field {
 
 /* ==================================================================
 								700px
+				= 	640px
+					+ left & right padding (20px + 20px) 
+					+ right sroll bar (20px)
  * ================================================================== */
 
 @media screen and (max-width: 700px) {
 
 
 
-/* ------------------------------------------------------------------
+/* ------------------------------------
 	#topmenu - > #menu
- * ------------------------------------------------------------------ */
+ * ------------------------------------ */
 
 #menu {
 	border-radius: 0;					/* remove default radius */
@@ -293,7 +298,6 @@ input.large-field, select.large-field {
 }
 
 
-
 #mainmenu-toggle {
 	display: block;
 	/* background-color: #283744; */
@@ -312,9 +316,9 @@ input.large-field, select.large-field {
 	right: 15px;
 }
 
-/* ------------------------------------------------------------------
-		#cart
- * ------------------------------------------------------------------ */
+/* ------------------------------------
+	#cart
+ * ------------------------------------ */
 #header #cart {
     height: 60px;
     margin: 0 auto;
@@ -326,22 +330,22 @@ input.large-field, select.large-field {
 	/* float: left; */
 }
 
-/* ------------------------------------------------------------------
-		#slideshow
- * ------------------------------------------------------------------ */
+/* ------------------------------------
+	#slideshow
+ * ------------------------------------ */
 .slideshow .nivoSlider {
 	background-size: contain;
 }
 
 
 	
-/* ------------------------------------------------------------------
+/* ------------------------------------
 	.box-product
 		
 	- 
 	- #tab-related  (Product Related)
 	
- * ------------------------------------------------------------------ */
+ * ------------------------------------ */
 .box-product {
 	/* overflow: hidden; */
 }
@@ -409,13 +413,13 @@ input.large-field, select.large-field {
 	display: none;						/* hide banner */
 }
 
-/* -----------------------------------------------------------------
+/* ------------------------------------
  
-							Product Details 
+	Product Details 
 
- * ----------------------------------------------------------------- */
+ * ------------------------------------ */
  
- #column-right {
+#column-right {
     clear: both;
     float: none;
     margin: 0 auto;
@@ -426,10 +430,30 @@ input.large-field, select.large-field {
 }
 
 
+/* ------------------------------------
+	#content .content .login-content
+	- Account Login
+ * ------------------------------------ */
+#content .login-content .left {
+	width: 100%;						/* replace default 48% */
+}
+#content .login-content .right {
+	width: 100%;						/* replace default 48% */
+}
 
-/* -----------------------------------------------------------------
-		#content -> OrderInformation
- * ----------------------------------------------------------------- */
+.login-content .left .content,
+.login-content .right .content {
+	min-height: 50px;					/* replace default 190px */
+}
+
+#content  select {
+	width: 100%;						/* avoid collapse its parent: dv */
+}
+
+
+/* ------------------------------------
+	#content -> OrderInformation
+ * ------------------------------------ */
 #content .content .left {
 	float: none;
 	width: 100%;
@@ -458,11 +482,15 @@ input.large-field, select.large-field {
 }
 
 
-/* ------------------------------------------------------------------
+
+
+/* ------------------------------------
 	#tabs 
-	- to be vertical tabs when width < 640px
-	- add #tab-container in product.tpl to wrap .tab-content 
- * ------------------------------------------------------------------ */
+	- to be vertical tabs when 
+	  width < 640px
+	- add #tab-container in product.tpl 
+	  to wrap .tab-content 
+ * ------------------------------------ */
 
 #tabs.htabs { 
 	height: auto;
@@ -500,7 +528,9 @@ input.large-field, select.large-field {
 
 /* ==================================================================
 
-								540px = 480px + 60px
+							540px 
+							
+						= 480px + 60px
 
  * ================================================================== */
 
@@ -548,15 +578,20 @@ input.large-field, select.large-field {
     clear: both;
 }
 
-/* ------------------------------------------------------------------
-		.buttons .right 
-		- Purchase Gift Btn: Continue
- * ------------------------------------------------------------------ */
-#content .buttons .right {
-    text-align: center;					/* center input button and text */
+
+#header #cart .content {
+	width: 250px;						/* replace normal size of 380px */
 }
 
 
+/* ------------------------------------
+	.buttons .right 
+							
+	- Purchase Gift Btn: Continue
+ * ------------------------------------ */
+#content .buttons .right {
+    text-align: center;					/* center input button and text */
+}
 
 
 /* ------------------------------------
@@ -586,6 +621,20 @@ input.large-field, select.large-field {
     width: 100%;
 }
 
+/* ------------------------------------
+	.compare-info at width < 350px
+ * ------------------------------------ */
+ 
+table.compare-info  {
+	table-layout: fixed;
+}
+ 
+.compare-info td {
+	overflow: hidden;
+}
+ 
+ 
+ 
 
 #footer .column { 
 	width: 95%;
@@ -608,6 +657,5 @@ input.large-field, select.large-field {
 body {
 	min-width: 300px;					/* IE 6- not support */
 }
-
 
 }
