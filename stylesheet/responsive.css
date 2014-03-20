@@ -46,7 +46,7 @@
 }
 
 #tab-related .box-product .image img {
-    width: 100%;
+    /* width: 100%; */ 					/* to show on img original size is the best */
 }
 
 
@@ -178,6 +178,8 @@ input.large-field, select.large-field {
     width: 98%;							/* capture full width of all 
 										   inputs' containers: table,
 										   tr, td */
+	padding: 0px;						/* remove default 3px padding and
+										   good at textarea as 99% width */
 }
 
 
@@ -356,7 +358,7 @@ input.large-field, select.large-field {
 }
 
 #tab-related .box-product .image img {
-    width: 150px;
+    /* width: 150px; *					/* to show on img original size is best */
 }
 
 
@@ -369,9 +371,23 @@ input.large-field, select.large-field {
 
 
  /* ------------------------------------
-	.product-list
+	 #content .product-list
 	- Products List Page
  * ------------------------------------ */
+.product-list .left {
+	width: 70%;
+}
+
+.product-list .right {
+}
+
+.product-list .name {
+	width: 50%;
+}
+
+.product-list .price {
+    float: left;
+}
 
 .product-list .description {
     width: 100%;
@@ -603,7 +619,6 @@ input.large-field, select.large-field {
 
  .product-filter .display {
     margin-right: 0;
-    width: 100%;
 }
 
 
@@ -611,15 +626,14 @@ input.large-field, select.large-field {
     float: left;
 }
 
-
-.product-list .price {
-    float: left;
-}
+/* ------------------------------------
+	#content .product-list
+ * ------------------------------------ */
 
 .product-list .name {
-    float: left;
     width: 100%;
 }
+
 
 /* ------------------------------------
 	.compare-info at width < 350px
@@ -632,15 +646,29 @@ table.compare-info  {
 .compare-info td {
 	overflow: hidden;
 }
- 
- 
- 
 
+.compare-info td img {
+	width: 100%; 					/* not good when one product */
+} 
+
+/* ------------------------------------
+	.wishlist-info img
+	- when in narrow space
+	  img auto strech?
+ * ------------------------------------ */
+
+.wishlist-info tbody .image img {
+    width: 100%;
+}
+ 
+/* ------------------------------------
+	#footer .column
+ * ------------------------------------ */
+ 
 #footer .column { 
 	width: 95%;
 	height: auto;
 }
-
 
 
 }
@@ -657,5 +685,6 @@ table.compare-info  {
 body {
 	min-width: 300px;					/* IE 6- not support */
 }
+
 
 }

@@ -1,3 +1,13 @@
+== v0.9 20/03/2014 by John Yin
+- remove auto scroll bar in Contact Form
+- show related product img on their original size  
+- imprvoe product list format
+- set fixed height (500px) for Privacy Policy colorbox when register
+- fix snippet js get slideshow window height 
+- all table title (with background) has #AAA
+  all table title (no background) has #999
+
+
 == v0.8fixed 19/03/2014 by John Yin
 - scroll bar when Product Comparision, Account >> Transaction
 - get current window width for colorbox when in 'register.tpl', 'slideshow.tpl', and for nivo_slide_container in 'product.tpl'.

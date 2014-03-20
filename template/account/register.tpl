@@ -280,10 +280,11 @@ $('select[name=\'country_id\']').trigger('change');
 //--></script> 
 <script type="text/javascript"><!--
 $(document).ready(function() {
-	var winWidth = navigator.userAgent.indexOf('AppleWebKit/') > -1 ? $(window).width() : window.innerWidth - 20; 
+	var winWidth = navigator.userAgent.indexOf('AppleWebKit/') > -1 ? $(window).width() : window.innerWidth - 40; 
 	$('.colorbox').colorbox({
 		scalePhotos: true,
-		width: winWidth
+		width: winWidth,
+		height: 500
 	});
 });
 //--></script> 

@@ -502,7 +502,7 @@ thead td,
 
 
 /* ------------------------------------
-	.product-list
+	#content .product-list
 		
 	- Products List Page
 		
@@ -516,6 +516,10 @@ thead td,
 .product-filter .display a {		
     color: #AAAAAA;
     font-weight: normal;
+}
+
+.product-list .name {
+    float: left;
 }
 
 .product-list .description {
@@ -544,6 +548,7 @@ thead td,
 #tab-attribute .attribute thead tr td:first-child,
 #tab-attribute .attribute tr td:first-child {
 	font-weight: normal;
+	color: #999999;						/* title color: #999 / #AAA */
 }
 
 
@@ -567,6 +572,16 @@ thead td,
  
 .sitemap-info ul {
     padding-left: 20px;
+}
+ 
+
+/* ------------------------------------
+    .wishlist-info
+	
+ * ------------------------------------ */
+ 
+.wishlist-info table {
+	table-layout: fixed;
 }
  
  
@@ -635,3 +650,11 @@ thead td,
 }
 
 
+/* ------------------------------------
+	#colorbox 
+	- to fix ColorBox style
+ * ------------------------------------ */
+
+ #cboxTitle {
+    left: 20px!important;
+}

@@ -39,7 +39,7 @@ $(document).ready(function() {
 		if (res){clearTimeout(res)};
 		res = setTimeout( 
 			function(){
-				var new_width 	=	window.innerWidth || $(window).width();
+				var new_width 	=	navigator.userAgent.indexOf('AppleWebKit/') > -1 ? $(window).width() : window.innerWidth - 40; 
 				var new_height 	=	Math.round( (new_width - fixed_padding) * (def_img_height / def_img_width) );	
 				if ( new_width >= 980 ){
 					$(nivo_slide_container).css({ "height": def_img_height, "width": def_img_width });
