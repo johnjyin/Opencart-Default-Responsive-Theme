@@ -4,9 +4,9 @@
 --	Email				  :	 john.yin@ebizdesigner.com
 --  Version               :  0.1
 --  Date                  :  14/03/2014
---  Description           :  styles for Sapphirewood.com.au
+--  Description           :  Styles for Sapphirewood.com.au
 --                         
---                           based on the Opencart Default Responsive theme
+--                        work with the Opencart Default Responsive Theme
 --                           
 --
 --  History               :  
@@ -15,18 +15,41 @@
 --
 --------------------------------------------------------------------- */
 
+
 /* ------------------------------------
 	#box-product
  * ------------------------------------ */
 
 .box-product > div {
 	width: 20%;
-	
+}
+
+.box-product > div:hover {
 }
 
 .box-product .image img {
     width: 150px;
+	border: 1px solid #FFF;
 }
+
+.box-product .image img:hover {
+	border: 1px solid #DDD;
+}
+
+/* ------------------------------------
+	#tab-related .box-product
+ * ------------------------------------ */
+ 
+#tab-related .box-product > div {
+	padding: 5px;
+	margin-right: 10px;
+ }
+ 
+#tab-related .box-product .image img {
+    width: auto;
+}
+ 
+ 
 
 /* ------------------------------------
 	.shop-contact
@@ -39,7 +62,7 @@
 }
 	
 .shop-contact  {
-	margin-bottom: 0px;					/* remove default .box bottom margin */					
+	margin-bottom: 0px;					/* remove default .box bottom margin */		
 }
 
 .shop-contact p {
@@ -58,28 +81,42 @@
 }
 
 .shop-contact h3 {
+	background: none repeat scroll 0 0 #777777;
+	line-height: 30px;
 	margin: 0px auto 8px;				/* same with #footer h3 */
 	font-weight: normal;				/* replace default blod h3 */
-    letter-spacing: 0.3px;				
+    letter-spacing: 0.3px;	
+    border-bottom: 1px solid #DDDDDD;
+    color: #EEEEEE;
+	text-align: center;
+}
+
+.shop-contact  h3:last-child {
+	margin-top: 15px;
 }
 
 .shop-contact  .box-content{
-	background-color: #666;				/* remove default .box .box-content border radius */
-	border-radius: 0px;					/* remove default .box .box-content border radius */
-	color: #BBB;
+	/*background-color: #666;*/			/* remove default .box .box-content border radius */
+	/* border-radius: 0px;	*/			/* remove default .box .box-content border radius */
+	color: #555;
 	padding: 0px;						/* remove default .box .box-content 10px padding */
 	font-size: 11px;
 }
 
 .shop-contact .grid-4 {
     float: left;
-    margin: 10px;
+    margin: 10px 2%;
     width: 21%;
+	padding: 0;
+}
+
+.shop-contact .grid-4.social-media {
+	text-align: center;
 }
 
 .shop-contact ul {
 	padding: 0px;
-	margin: 0px;
+	margin: 0px 5px;
 }
 
 .shop-contact ul li {
@@ -109,6 +146,7 @@
     font-family: FontAwesome;
 	vertical-align: middle;
     padding-right: 5px;
+	color: #AAA;
 }
 
 .shop-contact .awesome_icon_blank span:before {
@@ -153,7 +191,6 @@
 /* ------------------------------------
     .jcarousel
 	
-	
  * ------------------------------------ */
 
 .jcarousel-skin-opencart {
@@ -191,7 +228,7 @@
 }
 
 .jcarousel-skin-opencart .jcarousel-prev-horizontal:hover {
-	background: url("../image/arrow-prev-blue.png") no-repeat!important;
+	background: url("../image/arrow-prev-d.png") no-repeat!important;
 }
 
 .jcarousel-skin-opencart .jcarousel-next-horizontal {
@@ -199,7 +236,21 @@
 }
 
 .jcarousel-skin-opencart .jcarousel-next-horizontal:hover {
-	background: url("../image/arrow-next-blue.png") no-repeat!important;
+	background: url("../image/arrow-next-d.png") no-repeat!important;
+}
+
+.jcarousel-skin-opencart .jcarousel-next-disabled,
+.jcarousel-skin-opencart .jcarousel-next-disabled:hover,
+.jcarousel-skin-opencart .jcarousel-next-disabled-horizontal,
+.jcarousel-skin-opencart .jcarousel-next-disabled-horizontal:hover {
+	display:none!important;
+}
+
+.jcarousel-skin-opencart .jcarousel-prev-disabled,
+.jcarousel-skin-opencart .jcarousel-prev-disabled:hover,
+.jcarousel-skin-opencart .jcarousel-prev-disabled-horizontal,
+.jcarousel-skin-opencart .jcarousel-prev-disabled-horizontal:hover {
+	display:none;
 }
 
 
@@ -212,6 +263,10 @@
     margin: 5px;
     opacity: 0.7;
     padding: 5px;
+}
+
+.social-media .button:hover{
+	color: #FFF!important;
 }
 
 .social-media .sm-twitter,
@@ -227,3 +282,34 @@
  {
 	opacity: 1;
 }
+
+/* ------------------------------------
+	.testimonial
+ * ------------------------------------ */
+ 
+.testimonial strong{
+	color: #555;
+}
+
+blockquote {
+	font-family: Georgia, serif;
+	font-size: 14px;
+	font-style: italic;
+	margin: 0.25em 0;
+	padding: 0.25em 50px;
+	line-height: 1.45;
+	position: relative;
+	color: #383838;
+}
+
+blockquote:before {
+	display: block;
+	content: "\201C";
+	font-size: 80px;
+	position: absolute;
+	left: 0px;
+	top: -20px;
+	color: #7a7a7a;
+}
+
+ 

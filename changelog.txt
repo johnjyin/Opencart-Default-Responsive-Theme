@@ -1,3 +1,17 @@
+== v0.9.3 23/03/2014 by John Yin
+- prefix all style files by "dr" means "Default Responsive"
+- move responsive styles into corresponding responsive files
+	- dr-responsive.css TO dr-stylesheet.css
+	- dr-responsive-sw 	TO dr-stylesheet-sw.css
+	- dr-responsive-flexslider TO dr-stylesheet-flexslider.css
+
+As for SW
+- Custom Content Module come true one responsive slider by FlexSlider
+  FlexSlider (v2.2.0) replace NivoSlider, so as come ture one real responsive slider
+- Option To Product (v1.2, author: Raul Marosan) come true depended option selection
+- new style for shop information & social media module
+- new style for Testimonial
+
 == v0.9 20/03/2014 by John Yin
 - remove auto scroll bar in Contact Form
 - show related product img on their original size  

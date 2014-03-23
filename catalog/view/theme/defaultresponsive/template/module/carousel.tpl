@@ -18,8 +18,7 @@ $('#carousel<?php echo $module; ?> ul').jcarousel({
 
             },
             onAfterAnimation: function(){
-                $(".jcarousel-prev").removeClass("jcarousel-prev-disabled");
-                $(".jcarousel-prev").removeClass("jcarousel-prev-disabled-horizontal");
+
             }
         },
         itemLastOutCallback: {
@@ -27,8 +26,7 @@ $('#carousel<?php echo $module; ?> ul').jcarousel({
 
             },
             onAfterAnimation: function(){
-                $(".jcarousel-next").removeClass("jcarousel-next-disabled");
-                $(".jcarousel-next").removeClass("jcarousel-next-disabled-horizontal");
+
             }
         }
     });

@@ -533,5 +533,4 @@ $("#image").elevateZoom({
 	lensSize	: 70
 });
 //--></script> 
-
 <?php echo $footer; ?>

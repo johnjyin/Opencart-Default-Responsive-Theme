@@ -19,29 +19,39 @@
 <?php } ?>
 <link rel="stylesheet" type="text/css" href="catalog/view/theme/defaultresponsive/stylesheet/normalize.css" />
 <link rel="stylesheet" type="text/css" href="catalog/view/theme/default/stylesheet/stylesheet.css" />
-<link rel="stylesheet" type="text/css" href="catalog/view/theme/defaultresponsive/stylesheet/dr-stylesheet.css" />
-<link rel="stylesheet" type="text/css" href="catalog/view/theme/defaultresponsive/stylesheet/font-awesome.css" />
-<link href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
-<![if (!IE)|(gte IE 9)]>
-<link rel="stylesheet" type="text/css" href="catalog/view/theme/defaultresponsive/stylesheet/dr-responsive.css" />
-<![endif]>
+
 <link href="//fonts.googleapis.com/css?family=Droid+Sans:400,700" rel="stylesheet" type="text/css">
 <link href="//fonts.googleapis.com/css?family=Pontano+Sans:400" rel="stylesheet" type="text/css">
+<link rel="stylesheet" type="text/css" href="catalog/view/theme/defaultresponsive/stylesheet/font-awesome.css" />
+<link href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
+<link rel="stylesheet" type="text/css" href="catalog/view/theme/defaultresponsive/flexslider-2.2/flexslider.css" />
+
+<link rel="stylesheet" type="text/css" href="catalog/view/theme/defaultresponsive/stylesheet/dr-stylesheet.css" />
+<link rel="stylesheet" type="text/css" href="catalog/view/theme/defaultresponsive/stylesheet/dr-stylesheet-flexslider.css" />
+
+<![if (!IE)|(gte IE 9)]>
+<link rel="stylesheet" type="text/css" href="catalog/view/theme/defaultresponsive/stylesheet/dr-responsive.css" />
+<link rel="stylesheet" type="text/css" href="catalog/view/theme/defaultresponsive/stylesheet/dr-responsive-flexslider.css" />
+<![endif]>
+
 <?php foreach ($styles as $style) { ?>
 <link rel="<?php echo $style['rel']; ?>" type="text/css" href="<?php echo $style['href']; ?>" media="<?php echo $style['media']; ?>" />
 <?php } ?>
 <script type="text/javascript" src="catalog/view/javascript/jquery/jquery-1.7.1.min.js"></script>
 <script type="text/javascript" src="catalog/view/javascript/jquery/ui/jquery-ui-1.8.16.custom.min.js"></script>
-<script src="catalog/view/theme/defaultresponsive/js/jquery.elevatezoom.js"></script>
-<!--[if lt IE 9]>
-<script src="catalog/view/theme/defaultresponsive/js/css3-mediaqueries.js"></script>
-<script src="catalog/view/theme/defaultresponsive/js/html5shiv.js"></script>
-<![endif]-->
 <link rel="stylesheet" type="text/css" href="catalog/view/javascript/jquery/ui/themes/ui-lightness/jquery-ui-1.8.16.custom.css" />
 <script type="text/javascript" src="catalog/view/javascript/common.js"></script>
 <?php foreach ($scripts as $script) { ?>
 <script type="text/javascript" src="<?php echo $script; ?>"></script>
 <?php } ?>
+
+<script src="catalog/view/theme/defaultresponsive/js/jquery.elevatezoom.js"></script>
+<script src="catalog/view/theme/defaultresponsive/flexslider-2.2/jquery.flexslider.js"></script>
+<!--[if lt IE 9]>
+<script src="catalog/view/theme/defaultresponsive/js/css3-mediaqueries.js"></script>
+<script src="catalog/view/theme/defaultresponsive/js/html5shiv.js"></script>
+<![endif]-->
+
 <!--[if IE 7]> 
 <link rel="stylesheet" type="text/css" href="catalog/view/theme/default/stylesheet/ie7.css" />
 <![endif]-->

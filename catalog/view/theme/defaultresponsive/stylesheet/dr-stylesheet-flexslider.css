@@ -1,0 +1,106 @@
+/* ------------------------------------------------------------------
+--  Copyright             :  2014
+--  Author                :  JOHN J YIN
+--	Email				  :	 john.yin@ebizdesigner.com
+--  Version               :  0.1
+--  Date                  :  14/03/2014
+--  Description           :  Styles of Flexslider
+--                         
+--                     Work with the Opencart Default Responsive Theme
+--                           
+--
+--  History               :  
+--     <author>   <time>      <version >       <desc>
+--		John	23/03/2014		0.1				initial
+--
+--------------------------------------------------------------------- */
+
+
+
+/* ------------------------------------
+	#slider-home
+ * ------------------------------------ */
+ 
+.flexslider-container {
+}
+
+.flexslider-container .box-content {
+	padding: 0;
+}
+
+.flex-slides {
+	margin: 0;							/* remove stange top-margin: 8px */
+	padding: 0;							/* remove strange left-padding: 40px */
+}
+
+.flexslider { 							/* remove default border-radius */
+	-webkit-border-radius: 0px; 
+	-moz-border-radius: 0px; 
+	-o-border-radius: 0px; 
+	border-radius: 0px;
+	
+	border: 0;						/* remove .flexslider default 4px border */
+	margin: 0 0 10px;				/* replace .flexslider default 60px bottom margin */
+	box-shadow: none;				/* remove .flexslider default box-shadow */
+	overflow: hidden;
+}
+
+.flexslider .flex-slides > li {
+    display: none;
+    position: relative;
+}
+
+.flexslider .flex-slides img {
+    display: block;
+    width: 100%;
+}
+
+.flex-caption {
+    background: #585858;
+    opacity: 0.5;
+    padding: 10px 5px;
+    position: absolute;
+    width: 100%;
+	max-height: 25%;
+}
+
+.caption-bottom {
+	bottom: 0px;
+}
+
+.flex-caption h2 {
+    color: #DDD;
+    font-size: 32px;
+    font-weight: bold;
+    margin: 0 5px 10px;
+    text-shadow: 1px 1px #333333;
+}
+
+.flex-caption p {
+    color: #EEE;
+    font-size: 13px;
+    font-style: italic;
+    text-shadow: 1px 1px #555555;
+	margin: 5px;					/* replace p default 20px margin-bottom */
+}
+
+
+.flex-slides, 
+.flex-direction-nav {
+    list-style: none outside none;
+}
+
+.flex-direction-nav a {
+	overflow: visible;
+	font-size: 0px;					/* hidden navi text */
+}
+
+.flex-control-nav {
+    bottom: 20;
+	text-align: right;
+}
+
+.flex-control-paging li a {
+	color: #fff;
+}
+

@@ -3,49 +3,38 @@
 --  Author                :  JOHN J YIN
 --	Email				  :	 john.yin@ebizdesigner.com
 --  Version               :  0.1
---  Date                  :  15/03/2014
---  Description           :  Responsive styles for Sapphirewood.com.au
+--  Date                  :  23/03/2014
+--  Description           :  Responsive Styles of Flexslider
 --                         
---                           based on the Opencart Default Responsive theme
+--                         Work with Opencart Default Responsive Theme
 --                           
 --
 --  History               :  
 --     <author>   <time>      <version >       <desc>
---		John	15/03/2014		0.1				initial
+--		John	23/03/2014		0.1				initial
 --
 --------------------------------------------------------------------- */
-
-/* =================================================================
-
-							1040px = 980px + 60px
-
- * ================================================================= */
-
- 
-@media screen and (max-width: 980px) {
-
-.shop-contact .grid-4 {
-    width: 45%;
-	height: 170px;
-}
-
-
-}
-
 
 /* =================================================================
 
 							540px = 480px + 60px
 
  * ================================================================= */
- 
+
+
 @media screen and (max-width: 540px) {
 
-
-.shop-contact .grid-4 { 
-	width: 95%;
-	height: auto;
+.flex-caption {
+	padding: 5px 0;
+	line-height: 10px;
 }
 
+.flex-caption h2 {
+	font-size: 16px;
+}
+
+.flex-caption p {
+	font-size: 10px;
+}
 
 }

@@ -1,3 +1,22 @@
+/* ------------------------------------------------------------------
+--  Copyright             :  2014
+--  Author                :  JOHN J YIN
+--	Email				  :	 john.yin@ebizdesigner.com
+--  Version               :  0.1
+--  Date                  :  14/03/2014
+--  Description           :  
+-- 			Responsive Styles of Opencart Default Responsive Theme
+--                         
+--  
+--                           
+--
+--  History               :  
+--     <author>   <time>      <version >       <desc>
+--		John	14/03/2014		0.1				initial
+--
+--------------------------------------------------------------------- */
+
+
 /* =================================================================
 
 							1040px
@@ -41,7 +60,7 @@
  * ------------------------------------ */
 
 .box-product > div {
-	width: 23%;
+	width: 22%;
 	padding: 1%;
 }
 

@@ -1,3 +1,21 @@
+/* ------------------------------------------------------------------
+--  Copyright             :  2014
+--  Author                :  JOHN J YIN
+--	Email				  :	 john.yin@ebizdesigner.com
+--  Version               :  0.1
+--  Date                  :  14/03/2014
+--  Description           :  Styles of Opencart Default Responsive Theme
+--                         
+--  
+--                           
+--
+--  History               :  
+--     <author>   <time>      <version >       <desc>
+--		John	14/03/2014		0.1				initial
+--
+--------------------------------------------------------------------- */
+
+
 /*	-------------------------
 		global
 	-------------------------	*/
@@ -21,7 +39,7 @@ a, a:visited, a b {
 
 a:hover,
 a b:hover {
-    color: #382eee!important;			/* unified hover effect on link */
+    color: #00D0DD!important;			/* unified hover effect on link */
 	transition: all 0.5s ease 0s;		/* transition effect */
 	text-decoration: none;
 }
@@ -52,7 +70,7 @@ input.button {
 a.button:hover,
 input.button:hover {
 	background-color: #00D0DD;
-	color: #FFF;
+	color: #FFF;						/* conflict with unified a:hover */
 	text-shadow: none;
 	background-position: 0;
 }
@@ -85,13 +103,13 @@ thead td,
 	font-size: 14px;
 	font-family: 'Pontano Sans',arial,sans-serif;
 	border: none;
-	border-bottom: 1px solid #DDD;
-	background: none;				/* remove default background */
+	background: url('../image/grid.png') repeat;	/* remove default background */
 	line-height: 120%;
 	text-transform: uppercase;
-	padding: 2px;					/* replace default 7px - 10px padding */
-	color: #AAA;					/* replace default #000 color */
+	padding: 10px 5px;					/* replace default 7px - 10px padding */
+	color: #888;						/* replace default #000 color */
 	letter-spacing: 0.8px;
+	border-radius: 0px;					/* remove default border-raidus */
 }
 
 .box .box-content {
@@ -189,12 +207,15 @@ thead td,
     position: relative;
 	margin: 5px auto;					/* same line with .links */
     top: 0px;							/* same line with .links */
+	font-size: 11px;					/* unified 11px header font */
 }
 
 #header #welcome a {
 	color: #555555;						/* cover default blue color */
 	text-decoration: none;				/* remove underline */
 	transition: all 0.5s ease 0s;		/* transition effect */
+	font-size: 11px;					/* unified 11px header font 
+										 * replace default 12px */
 }
 
 #header #welcome a:hover {
@@ -206,6 +227,7 @@ thead td,
 	width: 400px;
     margin: 5px 0;						/* same line with #welcome */
 	top: 0px;							/* same line with #welcome */
+	text-align: left;					/* left align links content */
 }
 
 #header .links a {
@@ -429,11 +451,11 @@ thead td,
 }
 
 .box-product .image {
-	border: 1px solid #FFF;				/* keep 1px border space to hovering */
+	/* border: 1px solid #FFF;*/			/* keep 1px border space to hovering */
 }
 .box-product .image:hover {
 	/* width: 119px; */
-	border: 1px solid #E7E7E7;
+	/* border: 1px solid #E7E7E7; */
 }
 
 .box-product .image img {
@@ -448,7 +470,6 @@ thead td,
 	/*border-color: #E15452;  		*/
 }
 
-
 .box-product .name a {
     color: #4B4B4B;						/* new color for name */
     font-weight: normal;				/* remove default heavy style */
@@ -460,6 +481,11 @@ thead td,
 
 .box-product .price {
 	margin-bottom: 10px;				/* replace default 4px */
+}
+
+.box-product .price,
+.box-product .price-new {				
+    font-weight: normal;				/* replace default bold font */
 }
 
 .product_holder .price {
@@ -538,6 +564,7 @@ thead td,
 
 .htabs a {
 	font-weight: normal;
+	display: block;
 }
 
 .tab-content {
@@ -590,7 +617,7 @@ thead td,
  * ------------------------------------ */ 
 
 #footer {
-    background: #222;
+    background: #333;
 	padding: 0px; 							/* remove original padding=20px */
 	border-top: none;						/* reomve default top border */
 	border-bottom: 1px solid #333333;		/* */
@@ -601,14 +628,14 @@ thead td,
 
 #footer .column {
 	float: left;
-	width: 21%;
-	margin: 10px;
+	width: 23%;
+	margin: 10px 1%;
 	min-height: 100px;
 	text-align: left;
 }
 
 #footer .column h3 {
-	color: #555;
+	color: #666;
 	font-weight: normal;				/* replace h3 default blod style */
 	letter-spacing: 0.3px;		
 }
@@ -626,7 +653,7 @@ thead td,
 }
 
 #footer .column a {
-    color: #555;
+    color: #666;
 }
 
 #footer .column a:hover{
