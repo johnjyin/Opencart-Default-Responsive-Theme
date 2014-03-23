@@ -19,11 +19,11 @@
 <?php } ?>
 <link rel="stylesheet" type="text/css" href="catalog/view/theme/defaultresponsive/stylesheet/normalize.css" />
 <link rel="stylesheet" type="text/css" href="catalog/view/theme/default/stylesheet/stylesheet.css" />
-<link rel="stylesheet" type="text/css" href="catalog/view/theme/defaultresponsive/stylesheet/stylesheet.css" />
+<link rel="stylesheet" type="text/css" href="catalog/view/theme/defaultresponsive/stylesheet/dr-stylesheet.css" />
 <link rel="stylesheet" type="text/css" href="catalog/view/theme/defaultresponsive/stylesheet/font-awesome.css" />
 <link href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
 <![if (!IE)|(gte IE 9)]>
-<link rel="stylesheet" type="text/css" href="catalog/view/theme/defaultresponsive/stylesheet/responsive.css" />
+<link rel="stylesheet" type="text/css" href="catalog/view/theme/defaultresponsive/stylesheet/dr-responsive.css" />
 <![endif]>
 <link href="//fonts.googleapis.com/css?family=Droid+Sans:400,700" rel="stylesheet" type="text/css">
 <link href="//fonts.googleapis.com/css?family=Pontano+Sans:400" rel="stylesheet" type="text/css">
