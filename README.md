@@ -57,7 +57,10 @@ Notes: you have to keep the "default" theme as its original state, which has bee
 
 
 <h2>Following Me</h2>
-Fork me on <a target ="_blank" href="https://github.com/johnjyin/Opencart-Default-Responsive-Theme/">Github</a>, that's where I'm most active on this theme. And I would appreciate being contacted to let me know how you use it, and I would try to answer in the next few days. But if I can't, I still hope you could understand and forgive me, maybe it's too busy for me to do my work in that period.
+Fork and Watch me on <a target ="_blank" href="https://github.com/johnjyin/Opencart-Default-Responsive-Theme/">Github</a>, that's where I'm most active on this theme. 
+
+<h2>Support&Feedback</h2>
+I would appreciate being contacted to let me know how you use it, and I would try to answer within the next few days. But if I couldn't, I still hope you could understand and forgive me, maybe it's too busy to do work in that period.
 
 
 
