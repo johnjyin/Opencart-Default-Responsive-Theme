@@ -184,19 +184,28 @@ input.large-field, select.large-field {
 
 /* ------------------------------------
 	#content -> input
-	
-	- Product Details -> .Options 
-					-> textarea; input 
 	- Purchase a Gift Certificate
-	- Return Product
+		table td input
  * ------------------------------------ */
 
-#content input[type="text"], 
-#content input[type="password"], 
+#content input[type="text"],
 #content textarea {
-    width: 98%;							/* capture full width of all 
-										   inputs' containers: table,
-										   tr, td */
+	padding: 0px;						/* clear padding */
+	width: 98%;							/* streth 98% width of all input 
+										   in containers: table, tr, td  */
+}
+
+/* ------------------------------------
+  	Product Details
+ 		.product-info textarea
+ 		.product-infor input 
+ 	Return Product
+		.return-product input
+ * ------------------------------------ */
+
+#content .product-info input[type="text"],
+#content .return-product input[type="text"]{
+    width: 98%;							/* */
 	padding: 0px;						/* remove default 3px padding and
 										   good at textarea as 99% width */
 }
@@ -245,6 +254,22 @@ input.large-field, select.large-field {
  * ================================================================== */
 
 @media screen and (max-width: 700px) {
+
+/* ------------------------------------
+ * 	table, td
+ * ------------------------------------ */
+
+table {
+	table-layout: fixed;				/* table full with its container div */
+}
+
+
+table.radio td,							/* shopping cart voucher/coupon */
+table td {								/* #return-product */
+	word-wrap: break-word;				/* text content in table td column 
+										   break and wrap onto the next line */
+	padding: 2px;						/* padding between lines and columns */
+}
 
 
 
@@ -487,24 +512,27 @@ input.large-field, select.large-field {
 
 
 /* ------------------------------------
-	#content -> OrderInformation
+	#content -> Order Information
  * ------------------------------------ */
 #content .content .left {
 	float: none;
 	width: 100%;
 }
+
 #content .content .right {
 	float: none;
 	width: 100%;
 }
-
 
 input.large-field, select.large-field {
     width: 98%;
 }
 
 
-
+/* ------------------------------------
+ * 	#return-product
+ * ------------------------------------ */
+ 
 #return-product .return-name,
 #return-product .return-model,
 #return-product .return-code,
@@ -636,7 +664,7 @@ input.large-field, select.large-field {
 		
  * ------------------------------------ */
 
- .product-filter .display {
+.product-filter .display {
     margin-right: 0;
 }
 
@@ -680,6 +708,7 @@ table.compare-info  {
     width: 100%;
 }
  
+
 /* ------------------------------------
 	#footer .column
  * ------------------------------------ */
@@ -689,6 +718,15 @@ table.compare-info  {
 	height: auto;
 }
 
+
+/* ------------------------------------
+ *	#cboxTitle
+ * ------------------------------------ */
+ 
+#cboxTitle {
+    bottom: 5px;					/* two rows of photo title and navigator 
+									   to avoid overlap when in narrow window */
+}
 
 }
 

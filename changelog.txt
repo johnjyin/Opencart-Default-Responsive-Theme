@@ -1,3 +1,11 @@
+== v0.9.4 30/03/2014 by John Yin
+- template\common\header.tpl: adjust css calling sequence
+- colorBox: 
+	- set new height for popup colorBox
+	- avoid overlap photo title and nagivate 
+- td text content to break and wrap onto the next line 
+  to avoid overlapping when in narrow viewpoint
+
 == v0.9.3 23/03/2014 by John Yin
 - prefix all style files by "dr" means "Default Responsive"
 - move responsive styles into corresponding responsive files

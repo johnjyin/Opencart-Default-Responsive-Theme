@@ -354,19 +354,25 @@
 <script type="text/javascript"><!--
 $(document).ready(function() {
 	var res, new_width;
-	new_width 	=	navigator.userAgent.indexOf('AppleWebKit/') > -1 ? $(window).width() : window.innerWidth - 40; 
+	new_width 	= ( navigator.userAgent.indexOf('AppleWebKit/') > -1 ? $(window).width() : window.innerWidth )- 60; 
+	new_height 	= ( navigator.userAgent.indexOf('AppleWebKit/') > -1 ? $(window).height() : window.innerHeight )- 60; 
 	
 	$(window).resize( function () {
 		if (res){clearTimeout(res)};
 		res = setTimeout( function(){
-				new_width = navigator.userAgent.indexOf('AppleWebKit/') > -1 ? $(window).width() : window.innerWidth - 40;
+				new_width = ( navigator.userAgent.indexOf('AppleWebKit/') > -1 ? $(window).width() : window.innerWidth ) - 60;
+				new_height 	= ( navigator.userAgent.indexOf('AppleWebKit/') > -1 ? $(window).height() : window.innerHeight )- 60; 
 			}, 500 );
 		$('.colorbox').colorbox({
 			overlayClose: true,
 			opacity: 0.5,
 			rel: "colorbox",
 			scalePhotos: true,
-			width: new_width
+			width: new_width,
+			height: new_height
+		});
+		$('.roomContainer').css({
+			"left":"0"
 		});
 	}).trigger('resize');
 	

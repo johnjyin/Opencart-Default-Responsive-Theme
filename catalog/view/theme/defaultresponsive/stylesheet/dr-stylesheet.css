@@ -86,8 +86,8 @@ thead tr,
 thead td,
 .compare-info tr td:first-child 
  {
-    color: #999!important;				/* replace default #222 */
-    font-weight: normal!important;			/* remove default bold */
+    color: #999;					/* replace default #222 */
+    font-weight: normal;			/* remove default bold */
 }
 
 
@@ -277,6 +277,12 @@ thead td,
     right: 0;
     top: 15px;
     z-index: 16;
+}
+
+
+#cart .mini-cart-info .image {
+    width: 0px;							/* default width: 1px*/
+    display: none;						/* hidden image in mini cart */
 }
 
 /*
