@@ -15,7 +15,7 @@ Notes: This theme may be compatible with earlier versions of OpenCart, however I
 
 <h2>Features</h2>
 <ul>
-<li>The most basic responsive theme based on original Opencart Default theme, with only necessary adjustments on the original front-end template, JS and css.</li>
+<li>It's intended to be the most basic responsive theme with only necessary codes based on the Opencart default front-end template.</li>
 <li>Compatible Browsers: IE 9+, Firefox 19+, Safari 5+, Chrome 23+, Opera 12+</li>
 <li>Tested on iPhone 4s/5/5s (portrait, landscape), most Android System Smart Phone (Huawei, Sansung, HTC...)(portrait, landscape), Tablets (portrait, landscape), Desktop PC and Notebooks.</li>
 <li>All Original OpenCart modules (Front-end) have been responsive 
