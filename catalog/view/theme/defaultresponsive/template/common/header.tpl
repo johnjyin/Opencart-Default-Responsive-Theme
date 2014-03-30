@@ -30,12 +30,10 @@
 <link rel="stylesheet" type="text/css" href="catalog/view/theme/defaultresponsive/flexslider-2.2/flexslider.css" />
 
 <link rel="stylesheet" type="text/css" href="catalog/view/theme/defaultresponsive/stylesheet/dr-stylesheet.css" />
-<link rel="stylesheet" type="text/css" href="catalog/view/theme/defaultresponsive/stylesheet/dr-stylesheet-sw.css" />
 <link rel="stylesheet" type="text/css" href="catalog/view/theme/defaultresponsive/stylesheet/dr-stylesheet-flexslider.css" />
 
 <![if (!IE)|(gte IE 9)]>
 <link rel="stylesheet" type="text/css" href="catalog/view/theme/defaultresponsive/stylesheet/dr-responsive.css" />
-<link rel="stylesheet" type="text/css" href="catalog/view/theme/defaultresponsive/stylesheet/dr-responsive-sw.css" />
 <link rel="stylesheet" type="text/css" href="catalog/view/theme/defaultresponsive/stylesheet/dr-responsive-flexslider.css" />
 <![endif]>
 
