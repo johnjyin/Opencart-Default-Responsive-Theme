@@ -32,7 +32,7 @@ Notes: This theme may be compatible with earlier versions of OpenCart, however I
     <li> Multiple Levels Responsive Menus </li>
     <li> Responsive Tabs (jQuery Vertical Tabs) On Product Details Page</li>
     <li> Responsive Popup colorBox </li>
-    Notes: Except the default NivoSlider (can be replaced by any other free and responsive sliders, like FlexSlider).
+Notes: the default NivoSlider is still not responsive (even though its container has been), which can be replaced by any other responsive sliders, like FlexSlider.
   </ul>
 </li>
 
@@ -47,12 +47,13 @@ Ok, This theme is ready for you! As well, you can easily customize it with limit
 </ul>
 
 <h2>Installation</h2>
-Upload folder to your Opencart website root (not over-writen any existed files):
+Upload following folders to your Opencart website root (not over-writen any existed files):
   <ul>
     <li>catelog</li>
     <li>image</li>
   </ul>
-And logon into back-end >> System >> Settings >> Store >> Template, select "defaultresponsive".
+And logon on back-end >> System >> Settings >> Store >> Template, select "defaultresponsive".<br/>
+Notes: you have to keep the "default" theme as its original state, which has been pre-installed with your Opencart and located in "\catalog\view\theme\".
 
 
 <h2>Following Me</h2>
