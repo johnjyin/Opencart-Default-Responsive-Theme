@@ -387,8 +387,7 @@ table td {								/* #return-product */
 	
 /* ------------------------------------
 	.box-product
-		
-	- 
+
 	- #tab-related  (Product Related)
 	
  * ------------------------------------ */
@@ -544,6 +543,23 @@ input.large-field, select.large-field {
 	margin-right: 0;					/* remove default margin-right: 15px */
 }
 
+
+/* ------------------------------------
+ *	#at3win
+	AddIn Widget
+ * ------------------------------------ */
+ 
+#ate-msg {
+    min-height: 100px;
+}
+
+#ate-msg span textarea {
+	height: auto;
+}
+
+#ate-send p {
+	width: auto;
+}
 
 
 

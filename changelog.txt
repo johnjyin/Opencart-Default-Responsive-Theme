@@ -1,3 +1,9 @@
+== v0.9.4 01/04/2014 by John Yin
+As for SW
+- adjust Flex Slider captain style
+- hide Brands module
+- fix wrong link for Subscribe 
+
 == v0.9.4 30/03/2014 by John Yin
 - template\common\header.tpl: adjust css calling sequence
 - colorBox: 

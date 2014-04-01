@@ -123,9 +123,16 @@
 	list-style: none outside none;
 }
 
+/* ------------------------------------
+	#footer
+ * ------------------------------------ */
 
 #footer {
 	border-top: none;					/* reomve default top border */
+}
+
+#footer .column:nth-child(3) ul li:first-child {
+	display: none;						/* to hide Brands module */
 }
 
 
@@ -296,7 +303,7 @@ blockquote {
 	font-size: 14px;
 	font-style: italic;
 	margin: 0.25em 0;
-	padding: 0.25em 50px;
+	padding: 5px 60px;
 	line-height: 1.45;
 	position: relative;
 	color: #383838;
@@ -305,7 +312,7 @@ blockquote {
 blockquote:before {
 	display: block;
 	content: "\201C";
-	font-size: 80px;
+	font-size: 60px;
 	position: absolute;
 	left: 0px;
 	top: -20px;
